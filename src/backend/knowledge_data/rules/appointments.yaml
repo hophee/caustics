@@ -1,0 +1,10 @@
+# Planned visits (spec §11 «Приёмы»). Organisational settings, not clinical ones; the team may change
+# them freely. Reminders are in-app notifications to the patient (website-level, D-003).
+
+reminders:                       # sent this many minutes before the start of a planned visit
+  - {code: day, before_minutes: 1440}    # «завтра приём»
+  - {code: soon, before_minutes: 120}    # «через 2 часа»
+send_grace_minutes: 30           # a reminder later than this (e.g. after downtime) is dropped
+default_duration_minutes: 30
+plan_ahead_days: 365             # a visit can't be planned further ahead than this
+request_until_minutes: 120       # the patient can ask to reschedule/cancel until this long before the start

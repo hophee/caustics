@@ -1,0 +1,48 @@
+# BAI — КР F41.1, приложение Г6; также КР F40 (Г5) и F41.0 (Г8), пункты и ключ совпадают.
+# Шкала самоотчёта; период — последняя неделя, включая сегодняшний день.
+code: BAI
+version: 1
+name: "BAI · шкала тревоги Бека"
+measures: anxiety
+direction: higher_is_worse
+diagnoses: [F40, F41.0, F41.1]
+filled_by: patient
+source: "КР F41.1, приложение Г6, стр. PDF 105–106; также КР F40, приложение Г5; КР F41.0, приложение Г8"
+
+answer_sets:
+  bother:
+    - {value: 0, label: "Совсем не беспокоил"}
+    - {value: 1, label: "Слегка. Не слишком меня беспокоил"}
+    - {value: 2, label: "Умеренно. Это было неприятно, но я мог это переносить"}
+    - {value: 3, label: "Очень сильно. Я с трудом мог это выносить"}
+
+items:
+  - {id: 1, text: "Ощущение онемения или покалывания в теле", answers: bother}
+  - {id: 2, text: "Ощущение жара в теле", answers: bother}
+  - {id: 3, text: "Дрожь в ногах", answers: bother}
+  - {id: 4, text: "Неспособность расслабиться", answers: bother}
+  - {id: 5, text: "Страх, что произойдет самое плохое", answers: bother}
+  - {id: 6, text: "Головокружение или ощущение легкости в голове", answers: bother}
+  - {id: 7, text: "Ускоренное сердцебиение", answers: bother}
+  - {id: 8, text: "Неустойчивость", answers: bother}
+  - {id: 9, text: "Ощущение ужаса", answers: bother}
+  - {id: 10, text: "Нервозность", answers: bother}
+  - {id: 11, text: "Дрожь в руках", answers: bother}
+  - {id: 12, text: "Ощущение удушья", answers: bother}
+  - {id: 13, text: "Шаткость походки", answers: bother}
+  - {id: 14, text: "Страх утраты контроля", answers: bother}
+  - {id: 15, text: "Затрудненность дыхания", answers: bother}
+  - {id: 16, text: "Страх смерти", answers: bother}
+  - {id: 17, text: "Испуг", answers: bother}
+  - {id: 18, text: "Желудочно-кишечные расстройства", answers: bother}
+  - {id: 19, text: "Обмороки", answers: bother}
+  - {id: 20, text: "Приливы крови к лицу", answers: bother}
+  - {id: 21, text: "Усиление потоотделения (не связанное с жарой)", answers: bother}
+
+scoring:
+  method: sum
+  bands:
+    - {lower: 0,  upper: 9,  code: none,      level: 0, label: "Отсутствие тревоги"}
+    - {lower: 10, upper: 21, code: mild,      level: 1, label: "Незначительный уровень тревоги"}
+    - {lower: 22, upper: 35, code: moderate,  level: 2, label: "Средняя выраженность тревоги"}
+    - {lower: 36, upper: 63, code: high,      level: 3, label: "Очень высокая тревога"}

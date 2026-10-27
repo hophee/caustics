@@ -1,0 +1,80 @@
+# Demo/deploy stack: Postgres, migrations, API (also serves the built website, D-114), worker
+# (reminders, alert delivery, diary text model).
+#   cp .env.example .env   # fill in the secrets and the OHLP path
+#   docker compose up -d --build
+# The site and the API (/api/v1, /docs) are on http://${KOMPAS_WEB_BIND}:${KOMPAS_WEB_PORT}.
+name: kompas-public
+
+x-backend: &backend
+  build:
+    context: .
+    dockerfile: deploy/Dockerfile
+  image: ${KOMPAS_IMAGE:-kompas-backend}
+  restart: unless-stopped
+  init: true # reap child processes (model/torch subprocesses) so the container can always stop
+  environment: &backend-env
+    KOMPAS_DATABASE_URL: postgresql+asyncpg://kompas:${POSTGRES_PASSWORD:?set in .env}@db:5432/kompas
+    KOMPAS_JWT_SECRET: ${KOMPAS_JWT_SECRET:?set in .env (32+ characters)}
+    KOMPAS_INVITE_SECRET: ${KOMPAS_INVITE_SECRET:?set in .env (32+ characters)}
+    KOMPAS_OHLP_CSV: /data/ohlp_fields.csv
+    KOMPAS_DEMO_MODE: ${KOMPAS_DEMO_MODE:-false} # «Попробовать как пациент / как врач» (D-088)
+  volumes:
+    - ${KOMPAS_OHLP_HOST_PATH:-./ohlp_fields_v4.csv}:/data/ohlp_fields.csv:ro
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: kompas
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set in .env}
+      POSTGRES_DB: kompas
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U kompas -d kompas" ]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+
+  migrate:
+    <<: *backend
+    restart: "no"
+    entrypoint: [ "alembic", "upgrade", "head" ]
+    command: []
+    depends_on:
+      db: { condition: service_healthy }
+
+  api:
+    <<: *backend
+    ports:
+      - "${KOMPAS_WEB_BIND:-127.0.0.1}:${KOMPAS_WEB_PORT:-8080}:8000"
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+    healthcheck:
+      test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/openapi.json')" ]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 20s
+
+  worker:
+    <<: *backend
+    command: [ "worker" ]
+    environment:
+      <<: *backend-env
+      # llm = Qwen3-4B + opus-mt-ru-en translation (needs the weights below and ~16 GB RAM);
+      # keywords = light container, no weights
+      KOMPAS_TEXT_MODEL: ${KOMPAS_TEXT_MODEL:-llm}
+      HF_HUB_CACHE: /hf/hub
+      HF_HUB_OFFLINE: "1"
+    volumes:
+      - ${KOMPAS_OHLP_HOST_PATH:-./ohlp_fields_v4.csv}:/data/ohlp_fields.csv:ro
+      # weights are read from the host's Hugging Face hub cache (Qwen3-4B + opus-mt-ru-en, ~8 GB);
+      # it must be readable by the container user (uid 10001), i.e. world-readable
+      - ${HF_CACHE_HOST_PATH:-${HOME}/.cache/huggingface/hub}:/hf/hub:ro
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+
+volumes:
+  pgdata:

@@ -1,0 +1,66 @@
+# Drug-check policy (D-013, D-044..D-046). Team proposals awaiting clinical review.
+
+# How a label status combines with a patient fact.
+#   if_yes:     patient fact is YES (e.g. pregnant)
+#   if_unknown: patient fact is UNKNOWN (e.g. pregnancy not recorded) -> «уточните ...» warning
+#   (patient fact NO -> never a warning)
+matrix:
+  if_yes:
+    contraindicated: contraindicated
+    caution: caution
+    dose_adjustment: caution
+    no_data: no_data
+    no_adjustment: none
+    not_affected: none
+  if_unknown:
+    contraindicated: caution
+    caution: no_data
+    dose_adjustment: no_data
+    no_data: none
+    no_adjustment: none
+    not_affected: none
+
+# Drug-level interaction groups used in the ОХЛП extraction (4.5). Groups in the data that are not
+# listed here (and are not patient-level) are reported as import warnings and ignored.
+interaction_groups: ["ИМАО", "серотонинергические", "удлиняющие QT", "угнетающие ЦНС", "опиоиды", "литий",
+                     "антикоагулянты", "НПВП", "диуретики", "ингибиторы CYP1A2", "ингибиторы CYP2D6",
+                     "ингибиторы CYP3A4", "индукторы CYP3A4"]
+
+# Outcome of fixed rules (none / no_data / caution / contraindicated).
+severities:
+  age_below_min: contraindicated
+  icd_contraindicated: contraindicated
+  allergy: contraindicated
+  excipient: contraindicated
+  past_intolerance: caution
+  past_inefficacy: caution
+  dose_above_max: contraindicated
+  duplicate_substance: caution
+
+# Group membership the label extraction misses (proposal, needs clinical review).
+group_membership:
+  - group: "ИМАО"
+    substances: ["пирлиндол", "моклобемид", "селегилин", "разагилин", "сафинамид", "линезолид",
+                 "метиленовый синий", "транилципромин", "фенелзин", "ниаламид", "ипрониазид"]
+    atc_prefixes: ["N06AF", "N06AG", "N04BD"]
+    note: "Ингибиторы МАО: в извлечённых ОХЛП пирлиндол помечен только как серотонинергический"
+
+elderly_age: 65
+childbearing_age: [12, 55]  # proposal: outside this range pregnancy is not applicable
+
+conditions:
+  - {code: renal, name: "почечная недостаточность", icd: [N17, N18, N19], label_field: renal}
+  - {code: hepatic, name: "печёночная недостаточность", icd: [K70-K77], label_field: hepatic}
+
+group_load:
+  - {group: "серотонинергические", min_count: 3, outcome: caution,
+     message: "Три и более серотонинергических средства одновременно: риск серотонинового синдрома"}
+  - {group: "удлиняющие QT", min_count: 2, outcome: caution,
+     message: "Два и более средства, удлиняющих интервал QT"}
+
+patient_level:
+  - {group: "алкоголь", profile_fact: substance_use,
+     message: "Взаимодействие с алкоголем указано в инструкции"}
+
+named_interaction_default: caution
+justification_min_length: 10

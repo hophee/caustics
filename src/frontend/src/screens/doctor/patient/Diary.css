@@ -1,0 +1,20 @@
+.k.scr-diary button.f {
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+/* Sleep bars: the board's i.p / i.m / i.g classes, renamed (`.p` is the patient app's root class). */
+.k.scr-diary .sleep i.sl-p {
+  height: 14px;
+  opacity: 0.45;
+}
+.k.scr-diary .sleep i.sl-m {
+  height: 28px;
+  opacity: 0.7;
+}
+.k.scr-diary .sleep i.sl-g {
+  height: 42px;
+}
+.k.scr-diary .note .inp {
+  background: #fff;
+}

@@ -1,0 +1,35 @@
+# GAD-7 — КР F41.1, приложение Г2. Самоотчёт, последние 2 недели.
+# Скрининговый инструмент: требует клинической диагностики (в КР опечатка «для установки диагноза ПР»).
+code: GAD-7
+version: 1
+name: "GAD-7 · скрининговый опросник тревоги"
+measures: anxiety
+direction: higher_is_worse
+diagnoses: [F41.1]
+filled_by: patient
+source: "КР F41.1, приложение Г2, стр. PDF 86"
+licence_note: "Screening tool; confirm the Russian version and terms (B09)."
+
+answer_sets:
+  freq:
+    - {value: 0, label: "Никогда"}
+    - {value: 1, label: "Несколько дней"}
+    - {value: 2, label: "Более половины дней"}
+    - {value: 3, label: "Почти каждый день"}
+
+items:
+  - {id: 1, text: "Повышенная нервная возбудимость, беспокойство и раздражительность", answers: freq}
+  - {id: 2, text: "Неспособность справиться с волнением", answers: freq}
+  - {id: 3, text: "Чрезмерное беспокойство по разному поводу", answers: freq}
+  - {id: 4, text: "Неспособность расслабиться", answers: freq}
+  - {id: 5, text: "Крайняя степень беспокойства: «не могу найти себе место»", answers: freq}
+  - {id: 6, text: "Легко поддаюсь чувству беспокойства или раздражительности", answers: freq}
+  - {id: 7, text: "Опасение чего-то страшного", answers: freq}
+
+scoring:
+  method: sum
+  bands:
+    - {lower: 0,  upper: 4,  code: minimal,  level: 0, label: "Минимальный"}
+    - {lower: 5,  upper: 9,  code: mild,     level: 1, label: "Умеренный"}
+    - {lower: 10, upper: 14, code: moderate, level: 2, label: "Средний"}
+    - {lower: 15, upper: 21, code: severe,   level: 3, label: "Высокий"}

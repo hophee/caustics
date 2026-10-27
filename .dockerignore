@@ -1,0 +1,15 @@
+# Build context = repository root; only the backend and the website sources go in.
+*
+!src/backend/
+!src/frontend/
+src/backend/.venv/
+src/backend/tests/
+src/frontend/node_modules/
+src/frontend/dist/
+src/frontend/test-results/
+src/frontend/playwright-report/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.env

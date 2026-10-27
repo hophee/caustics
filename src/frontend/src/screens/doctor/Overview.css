@@ -1,0 +1,10 @@
+/* Additions to board I2-Overview (src/styles/screens/overview.css). */
+.k.scr-overview .alert { cursor: pointer; }
+.k.scr-overview .alert .nm { font-weight: 600; text-decoration: none; }
+.k.scr-overview .alert .nm:hover { text-decoration: underline; }
+.k.scr-overview .late { color: #a4161a; font-weight: 500; }
+.k.scr-overview .err { color: #a4161a; font-size: 13px; margin-top: 8px; }
+.k.scr-overview .when.stale { color: #7a4b00; font-weight: 500; }
+.k.scr-overview .btn:disabled { opacity: 0.45; cursor: default; }
+/* A diary entry whose assessment is still running. */
+.k.scr-overview .sq.w { background: #e8e6e1; }

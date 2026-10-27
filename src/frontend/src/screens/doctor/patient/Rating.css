@@ -1,0 +1,24 @@
+.k.scr-rating button.opt {
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  background: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+.k.scr-rating .items button {
+  height: 8px;
+  border-radius: 2px;
+  background: #e6e4df;
+  display: block;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.k.scr-rating .items button.d {
+  background: var(--data);
+}
+.k.scr-rating .items button.c {
+  outline: 2px solid #16161a;
+  outline-offset: 1px;
+}

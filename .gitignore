@@ -1,0 +1,50 @@
+# --- Large reference materials: local only, never pushed (GitHub size limits) ---
+materials/
+local-data/
+kr_pdf/
+drive_download/
+yandex_download/
+*.zip
+*.numbers
+*.penpot
+ohlp_fields_*.csv
+!ohlp_fields_v4.csv
+ohlp_fields_*.xlsx
+prototype_*.html
+Клинический-компас-*.html
+Проект_Каустики-итог.pdf
+
+# --- Python / uv ---
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# --- Local dev database (tools/devdb) ---
+.devdb/
+
+# --- Env / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Frontend (later phase) ---
+node_modules/
+*.tsbuildinfo
+
+# --- Tooling ---
+.claude/worktrees/
+.claude/settings.local.json
+.idea/
+.vscode/
+.DS_Store
+
+# --- Design tooling output (screenshots, converted pages) ---
+.taste-skill/

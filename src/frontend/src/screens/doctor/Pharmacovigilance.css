@@ -1,0 +1,12 @@
+.fn-notice{margin-top:12px;padding:12px;border:1px solid #dacba7;border-radius:10px;background:#fffaf0;max-width:420px;min-width:240px;font-size:14px;display:grid;gap:8px}
+.fn-notice .link-btn{text-align:left;white-space:normal;height:auto;border:0;background:transparent;color:#1d4f91;text-decoration:underline;font:inherit;cursor:pointer;padding:0}
+.fn-quote{white-space:pre-wrap;overflow-wrap:anywhere;font-weight:400}
+.dlg.scr-pharmacovigilance{position:fixed;inset:0;z-index:1000;background:#0007;display:flex;align-items:flex-start;justify-content:center;padding:24px;overflow:auto}
+.dlg.scr-pharmacovigilance .modal{background:white;border-radius:16px;padding:24px;width:min(900px,100%);max-height:none;color:#16161a}
+.scr-pharmacovigilance fieldset{border:1px solid #ddd;border-radius:10px;padding:16px;margin:20px 0}
+.scr-pharmacovigilance legend{font-weight:600;padding:0 8px}
+.fn-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fn-fields .fld{display:grid;gap:6px;align-content:start;font-size:14px}
+.fn-fields .inp{width:100%;box-sizing:border-box;min-height:40px;padding:8px;border:1px solid #aaa;border-radius:8px;font:inherit;background:white}
+.fn-wide{grid-column:1/-1}.fn-checks{display:grid;gap:8px}.fn-actions{display:flex;flex-wrap:wrap;gap:10px;position:sticky;bottom:0;background:white;padding:16px 0}
+@media(max-width:650px){.fn-fields{grid-template-columns:1fr}.dlg.scr-pharmacovigilance{padding:8px}.dlg.scr-pharmacovigilance .modal{padding:16px}}

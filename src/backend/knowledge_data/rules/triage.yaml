@@ -1,0 +1,75 @@
+# Diary triage rules (D-032, D-033, D-035). All thresholds are team proposals awaiting clinical review.
+# Levels: stable | attention | urgent.
+
+complaint_rules:
+  - complaints: [suicidal_thoughts]
+    level: urgent
+    message: "Пациент отметил суицидальные мысли"
+  - complaints: [hallucinations, delusions]
+    level: urgent
+    message: "Пациент отметил психотические симптомы"
+  - complaints: [euphoria]
+    level: attention
+    only_on_antidepressant: true
+    message: "Эйфория или гипоманиакальные проявления на фоне антидепрессанта"
+  - complaints: [aggression]
+    level: attention
+    message: "Импульсивность или агрессивность"
+
+safety_question_unanswered: attention
+side_effect_level: attention
+mood_drop_points: 3
+mood_drop_days: 3
+model_unsure_threshold: 0.6
+
+keywords:
+  urgent: ["не хочу жить", "не хочу больше жить", "жить не хочу", "не хочется жить", "жить не хочется",
+           "хочу умереть", "хочется умереть", "лучше умереть", "умереть бы", "покончить", "убить себя",
+           "навредить себе", "суицид", "самоубий", "лучше бы меня не было", "выпить все таблетки",
+           "наглотал", "повес", "повеш", "спрыгн", "спрыгу", "порез", "смысла жить", "голоса",
+           "сдохнуть", "не просыпаться", "не проснуться", "исчезну", "обуза", "попрощ",
+           "все закончить", "закончить все", "устала жить", "устал жить", "устал от жизни",
+           "устала от жизни"]
+  attention: ["хуже", "не сплю", "плохо сплю", "не спала", "бессонниц", "тошнит", "плачу", "паник",
+              "страшно", "тревог", "не могу", "побочн", "кружится", "нет сил", "раздраж", "забыл",
+              "бросить таблетки", "ужасно"]
+
+# Scenario of an «Срочно» alert by source (D-132). A scale's critical rule may set its own `scenario`.
+urgent_scenarios:
+  questionnaire: danger_now    # critical answer in a questionnaire (PHQ-9 item 9, C-SSRS …)
+  diary_answers: danger_now    # diary safety question «да», critical complaint (old diary)
+  diary_text: check_soon       # keyword list or the text model said «Срочно»
+
+# Diary v2: mood 0 depressed / 1 normal / 2 elevated; anxiety, irritability 0–3; sleep in hours.
+# Pilot hypotheses for clinical review (docs/next/clinical-review.md), not КР thresholds.
+# Old 0–10 entries are never mixed in. «Streak» = consecutive calendar days that have v2 entries.
+diary_v2:
+  entry_rules:
+    - code: unusual_experiences
+      when: {unusual_experiences: true}
+      level: attention
+      message: "Отмечены необычные мысли или переживания"
+    - code: elevated_mood_short_sleep
+      when: {mood: [2], sleep_hours_below: 5}
+      level: attention
+      message: "Повышенное настроение при коротком сне"
+    - code: elevated_mood_irritability
+      when: {mood: [2], irritability_min: 2}
+      level: attention
+      message: "Повышенное настроение с раздражительностью"
+  streak_rules:
+    - code: depressed_mood_streak
+      when: {mood: [0]}
+      days: 3
+      level: attention
+      message: "Депрессивное настроение несколько дней подряд"
+    - code: anxiety_max_streak
+      when: {anxiety_min: 3}
+      days: 2
+      level: attention
+      message: "Тревога 3 из 3 несколько дней подряд"
+    - code: short_sleep_streak
+      when: {sleep_hours_below: 4}
+      days: 2
+      level: attention
+      message: "Сон меньше 4 ч несколько ночей подряд"

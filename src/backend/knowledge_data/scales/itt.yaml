@@ -1,0 +1,1086 @@
+# ИТТ (Бизюк, Вассерман, Иовлев) — КР F41.1, приложение Г4; также КР F40 (Г3) и F41.0 (Г6).
+# Два бланка: СТ-Л (личностная, «на протяжении последнего года») — пункты Л1–Л15;
+# СТ-С (ситуативная, «сейчас») — пункты С1–С15. В бланке СТ-С пункты в PDF не пронумерованы.
+# Результат — сырые баллы и станайны (нормы для взрослых и юношей / для девушек).
+code: ITT
+version: 1
+name: ИТТ · интегративный тест тревожности
+measures: anxiety
+direction: higher_is_worse
+diagnoses:
+- F40
+- F41.0
+- F41.1
+filled_by: patient
+source: КР F41.1, приложение Г4, стр. PDF 95–99; также КР F40, приложение Г3; КР F41.0, приложение Г6
+answer_sets:
+  trait:
+  - value: 0
+    label: Почти никогда
+  - value: 1
+    label: Редко
+  - value: 2
+    label: Часто
+  - value: 3
+    label: Почти все время
+  state:
+  - value: 0
+    label: Совсем нет
+  - value: 1
+    label: Слабо выражено
+  - value: 2
+    label: Выражено
+  - value: 3
+    label: Очень выражено
+items:
+- id: Л1
+  text: Я находился в напряжении
+  answers: trait
+- id: Л2
+  text: Я расстраивался
+  answers: trait
+- id: Л3
+  text: Я тревожился о будущем
+  answers: trait
+- id: Л4
+  text: Я нервничал
+  answers: trait
+- id: Л5
+  text: Я бывал озабочен
+  answers: trait
+- id: Л6
+  text: Я бывал возбужден
+  answers: trait
+- id: Л7
+  text: Я ощущал непонятную угрозу
+  answers: trait
+- id: Л8
+  text: Я быстро уставал
+  answers: trait
+- id: Л9
+  text: Я бывал не уверен в себе
+  answers: trait
+- id: Л10
+  text: Я избегал любых конфликтов
+  answers: trait
+- id: Л11
+  text: Я легко приходил в замешательство
+  answers: trait
+- id: Л12
+  text: Я ощущал свою бесполезность
+  answers: trait
+- id: Л13
+  text: Я плохо спал
+  answers: trait
+- id: Л14
+  text: Я ощущал себя утомленным
+  answers: trait
+- id: Л15
+  text: Я бывал эмоционально чувствителен
+  answers: trait
+- id: С1
+  text: Я нахожусь в напряжении
+  answers: state
+- id: С2
+  text: Я расстроен
+  answers: state
+- id: С3
+  text: Я тревожусь о будущем
+  answers: state
+- id: С4
+  text: Я нервничаю
+  answers: state
+- id: С5
+  text: Я озабочен
+  answers: state
+- id: С6
+  text: Я возбужден
+  answers: state
+- id: С7
+  text: Я ощущаю непонятную угрозу
+  answers: state
+- id: С8
+  text: Я устаю быстрее обычного
+  answers: state
+- id: С9
+  text: Я не уверен в себе
+  answers: state
+- id: С10
+  text: Я избегаю любых конфликтов
+  answers: state
+- id: С11
+  text: Я чувствую замешательство
+  answers: state
+- id: С12
+  text: Я ощущаю свою бесполезность
+  answers: state
+- id: С13
+  text: Я спал беспокойно
+  answers: state
+- id: С14
+  text: Я ощущаю себя утомленным
+  answers: state
+- id: С15
+  text: Я эмоционально чувствителен
+  answers: state
+scoring:
+  method: subscales
+  subscales:
+  - code: trait
+    name: Личностная тревожность (СТ-Л), общий показатель
+    items:
+    - Л1
+    - Л2
+    - Л3
+    - Л4
+    - Л5
+    - Л6
+    - Л7
+    - Л8
+    - Л9
+    - Л10
+    - Л11
+    - Л12
+    - Л13
+    - Л14
+    - Л15
+    aggregate: sum
+    norms:
+      kind: stanine
+      adults_and_young_men:
+      - stanine: 1
+        lower: 0
+        upper: 6
+      - stanine: 2
+        lower: 7
+        upper: 8
+      - stanine: 3
+        lower: 9
+        upper: 9
+      - stanine: 4
+        lower: 10
+        upper: 11
+      - stanine: 5
+        lower: 12
+        upper: 14
+      - stanine: 6
+        lower: 15
+        upper: 18
+      - stanine: 7
+        lower: 19
+        upper: 22
+      - stanine: 8
+        lower: 23
+        upper: 26
+      - stanine: 9
+        lower: 27
+        upper: 45
+      young_women:
+      - stanine: 1
+        lower: 0
+        upper: 6
+      - stanine: 2
+        lower: 7
+        upper: 8
+      - stanine: 3
+        lower: 9
+        upper: 10
+      - stanine: 4
+        lower: 11
+        upper: 12
+      - stanine: 5
+        lower: 13
+        upper: 16
+      - stanine: 6
+        lower: 17
+        upper: 21
+      - stanine: 7
+        lower: 22
+        upper: 25
+      - stanine: 8
+        lower: 26
+        upper: 30
+      - stanine: 9
+        lower: 31
+        upper: 45
+  - code: state
+    name: Ситуативная тревожность (СТ-С), общий показатель
+    items:
+    - С1
+    - С2
+    - С3
+    - С4
+    - С5
+    - С6
+    - С7
+    - С8
+    - С9
+    - С10
+    - С11
+    - С12
+    - С13
+    - С14
+    - С15
+    aggregate: sum
+    norms:
+      kind: stanine
+      adults_and_young_men:
+      - stanine: 1
+        lower: 0
+        upper: 6
+      - stanine: 2
+        lower: 7
+        upper: 8
+      - stanine: 3
+        lower: 9
+        upper: 9
+      - stanine: 4
+        lower: 10
+        upper: 11
+      - stanine: 5
+        lower: 12
+        upper: 14
+      - stanine: 6
+        lower: 15
+        upper: 18
+      - stanine: 7
+        lower: 19
+        upper: 22
+      - stanine: 8
+        lower: 23
+        upper: 26
+      - stanine: 9
+        lower: 27
+        upper: 45
+      young_women:
+      - stanine: 1
+        lower: 0
+        upper: 6
+      - stanine: 2
+        lower: 7
+        upper: 8
+      - stanine: 3
+        lower: 9
+        upper: 10
+      - stanine: 4
+        lower: 11
+        upper: 12
+      - stanine: 5
+        lower: 13
+        upper: 16
+      - stanine: 6
+        lower: 17
+        upper: 21
+      - stanine: 7
+        lower: 22
+        upper: 25
+      - stanine: 8
+        lower: 26
+        upper: 30
+      - stanine: 9
+        lower: 31
+        upper: 45
+  - code: ED_trait
+    name: Эмоциональный дискомфорт (СТ-Л)
+    weights:
+      Л1:
+        0: 0
+        3: 74
+        2: 49
+        1: 25
+      Л2:
+        0: 0
+        3: 73
+        2: 49
+        1: 24
+      Л4:
+        0: 0
+        3: 80
+        2: 53
+        1: 27
+      Л6:
+        0: 0
+        3: 73
+        2: 49
+        1: 24
+    norms:
+      kind: stanine
+      adults_and_young_men:
+      - stanine: 1
+        lower: 0
+        upper: 34
+      - stanine: 2
+        lower: 35
+        upper: 48
+      - stanine: 3
+        lower: 49
+        upper: 62
+      - stanine: 4
+        lower: 63
+        upper: 76
+      - stanine: 5
+        lower: 77
+        upper: 100
+      - stanine: 6
+        lower: 101
+        upper: 137
+      - stanine: 7
+        lower: 138
+        upper: 173
+      - stanine: 8
+        lower: 174
+        upper: 209
+      - stanine: 9
+        lower: 210
+        upper: null
+      young_women:
+      - stanine: 1
+        lower: 0
+        upper: 42
+      - stanine: 2
+        lower: 43
+        upper: 58
+      - stanine: 3
+        lower: 59
+        upper: 75
+      - stanine: 4
+        lower: 76
+        upper: 92
+      - stanine: 5
+        lower: 93
+        upper: 117
+      - stanine: 6
+        lower: 118
+        upper: 150
+      - stanine: 7
+        lower: 151
+        upper: 183
+      - stanine: 8
+        lower: 184
+        upper: 217
+      - stanine: 9
+        lower: 218
+        upper: null
+    items:
+    - Л1
+    - Л2
+    - Л4
+    - Л6
+  - code: AST_trait
+    name: Астенический компонент тревожности (СТ-Л)
+    weights:
+      Л8:
+        0: 0
+        3: 91
+        2: 61
+        1: 30
+      Л13:
+        0: 0
+        3: 122
+        2: 81
+        1: 41
+      Л14:
+        0: 0
+        3: 87
+        2: 58
+        1: 29
+    norms:
+      kind: stanine
+      adults_and_young_men:
+      - stanine: 1
+        lower: 0
+        upper: 26
+      - stanine: 2
+        lower: 27
+        upper: 36
+      - stanine: 3
+        lower: 37
+        upper: 47
+      - stanine: 4
+        lower: 48
+        upper: 57
+      - stanine: 5
+        lower: 58
+        upper: 82
+      - stanine: 6
+        lower: 83
+        upper: 122
+      - stanine: 7
+        lower: 123
+        upper: 161
+      - stanine: 8
+        lower: 162
+        upper: 201
+      - stanine: 9
+        lower: 202
+        upper: null
+      young_women:
+      - stanine: 1
+        lower: 0
+        upper: 31
+      - stanine: 2
+        lower: 32
+        upper: 44
+      - stanine: 3
+        lower: 45
+        upper: 57
+      - stanine: 4
+        lower: 58
+        upper: 70
+      - stanine: 5
+        lower: 71
+        upper: 95
+      - stanine: 6
+        lower: 96
+        upper: 132
+      - stanine: 7
+        lower: 133
+        upper: 169
+      - stanine: 8
+        lower: 170
+        upper: 206
+      - stanine: 9
+        lower: 207
+        upper: null
+    items:
+    - Л8
+    - Л13
+    - Л14
+  - code: FOB_trait
+    name: Фобический компонент (СТ-Л)
+    weights:
+      Л7:
+        0: 0
+        3: 111
+        2: 74
+        1: 37
+      Л9:
+        0: 0
+        3: 85
+        2: 56
+        1: 28
+      Л12:
+        0: 0
+        3: 87
+        2: 58
+        1: 29
+    norms:
+      kind: stanine
+      adults_and_young_men:
+      - stanine: 1
+        lower: 0
+        upper: 13
+      - stanine: 2
+        lower: 14
+        upper: 19
+      - stanine: 3
+        lower: 20
+        upper: 24
+      - stanine: 4
+        lower: 25
+        upper: 29
+      - stanine: 5
+        lower: 30
+        upper: 54
+      - stanine: 6
+        lower: 55
+        upper: 99
+      - stanine: 7
+        lower: 100
+        upper: 144
+      - stanine: 8
+        lower: 145
+        upper: 188
+      - stanine: 9
+        lower: 189
+        upper: null
+      young_women:
+      - stanine: 1
+        lower: 0
+        upper: 16
+      - stanine: 2
+        lower: 17
+        upper: 23
+      - stanine: 3
+        lower: 24
+        upper: 29
+      - stanine: 4
+        lower: 30
+        upper: 36
+      - stanine: 5
+        lower: 37
+        upper: 61
+      - stanine: 6
+        lower: 62
+        upper: 104
+      - stanine: 7
+        lower: 105
+        upper: 148
+      - stanine: 8
+        lower: 149
+        upper: 191
+      - stanine: 9
+        lower: 192
+        upper: null
+    items:
+    - Л7
+    - Л9
+    - Л12
+  - code: OP_trait
+    name: Тревожная оценка перспективы (СТ-Л)
+    weights:
+      Л3:
+        0: 0
+        3: 110
+        2: 74
+        1: 37
+      Л5:
+        0: 0
+        3: 98
+        2: 65
+        1: 32
+      Л15:
+        0: 0
+        3: 92
+        2: 61
+        1: 31
+    norms:
+      kind: stanine
+      adults_and_young_men:
+      - stanine: 1
+        lower: 0
+        upper: 44
+      - stanine: 2
+        lower: 45
+        upper: 62
+      - stanine: 3
+        lower: 63
+        upper: 80
+      - stanine: 4
+        lower: 81
+        upper: 97
+      - stanine: 5
+        lower: 98
+        upper: 122
+      - stanine: 6
+        lower: 123
+        upper: 155
+      - stanine: 7
+        lower: 156
+        upper: 187
+      - stanine: 8
+        lower: 188
+        upper: 219
+      - stanine: 9
+        lower: 220
+        upper: null
+      young_women:
+      - stanine: 1
+        lower: 0
+        upper: 53
+      - stanine: 2
+        lower: 54
+        upper: 75
+      - stanine: 3
+        lower: 76
+        upper: 97
+      - stanine: 4
+        lower: 98
+        upper: 118
+      - stanine: 5
+        lower: 119
+        upper: 143
+      - stanine: 6
+        lower: 144
+        upper: 172
+      - stanine: 7
+        lower: 173
+        upper: 200
+      - stanine: 8
+        lower: 201
+        upper: 228
+      - stanine: 9
+        lower: 229
+        upper: null
+    items:
+    - Л3
+    - Л5
+    - Л15
+  - code: SZ_trait
+    name: Социальные реакции защиты (СТ-Л)
+    weights:
+      Л10:
+        0: 0
+        3: 171
+        2: 114
+        1: 57
+      Л11:
+        0: 0
+        3: 129
+        2: 86
+        1: 43
+    norms:
+      kind: stanine
+      adults_and_young_men:
+      - stanine: 1
+        lower: 0
+        upper: 50
+      - stanine: 2
+        lower: 51
+        upper: 70
+      - stanine: 3
+        lower: 71
+        upper: 90
+      - stanine: 4
+        lower: 91
+        upper: 110
+      - stanine: 5
+        lower: 111
+        upper: 135
+      - stanine: 6
+        lower: 136
+        upper: 165
+      - stanine: 7
+        lower: 166
+        upper: 195
+      - stanine: 8
+        lower: 196
+        upper: 225
+      - stanine: 9
+        lower: 226
+        upper: null
+      young_women:
+      - stanine: 1
+        lower: 0
+        upper: 60
+      - stanine: 2
+        lower: 61
+        upper: 85
+      - stanine: 3
+        lower: 86
+        upper: 109
+      - stanine: 4
+        lower: 110
+        upper: 134
+      - stanine: 5
+        lower: 135
+        upper: 159
+      - stanine: 6
+        lower: 160
+        upper: 184
+      - stanine: 7
+        lower: 185
+        upper: 210
+      - stanine: 8
+        lower: 211
+        upper: 235
+      - stanine: 9
+        lower: 236
+        upper: null
+    items:
+    - Л10
+    - Л11
+  - code: ED_state
+    name: Эмоциональный дискомфорт (СТ-С)
+    weights:
+      С1:
+        0: 0
+        3: 74
+        2: 49
+        1: 25
+      С2:
+        0: 0
+        3: 73
+        2: 49
+        1: 24
+      С4:
+        0: 0
+        3: 80
+        2: 53
+        1: 27
+      С6:
+        0: 0
+        3: 73
+        2: 49
+        1: 24
+    norms:
+      kind: stanine
+      adults_and_young_men:
+      - stanine: 1
+        lower: 0
+        upper: 34
+      - stanine: 2
+        lower: 35
+        upper: 48
+      - stanine: 3
+        lower: 49
+        upper: 62
+      - stanine: 4
+        lower: 63
+        upper: 76
+      - stanine: 5
+        lower: 77
+        upper: 100
+      - stanine: 6
+        lower: 101
+        upper: 137
+      - stanine: 7
+        lower: 138
+        upper: 173
+      - stanine: 8
+        lower: 174
+        upper: 209
+      - stanine: 9
+        lower: 210
+        upper: null
+      young_women:
+      - stanine: 1
+        lower: 0
+        upper: 42
+      - stanine: 2
+        lower: 43
+        upper: 58
+      - stanine: 3
+        lower: 59
+        upper: 75
+      - stanine: 4
+        lower: 76
+        upper: 92
+      - stanine: 5
+        lower: 93
+        upper: 117
+      - stanine: 6
+        lower: 118
+        upper: 150
+      - stanine: 7
+        lower: 151
+        upper: 183
+      - stanine: 8
+        lower: 184
+        upper: 217
+      - stanine: 9
+        lower: 218
+        upper: null
+    items:
+    - С1
+    - С2
+    - С4
+    - С6
+  - code: AST_state
+    name: Астенический компонент тревожности (СТ-С)
+    weights:
+      С8:
+        0: 0
+        3: 91
+        2: 61
+        1: 30
+      С13:
+        0: 0
+        3: 122
+        2: 81
+        1: 41
+      С14:
+        0: 0
+        3: 87
+        2: 58
+        1: 29
+    norms:
+      kind: stanine
+      adults_and_young_men:
+      - stanine: 1
+        lower: 0
+        upper: 26
+      - stanine: 2
+        lower: 27
+        upper: 36
+      - stanine: 3
+        lower: 37
+        upper: 47
+      - stanine: 4
+        lower: 48
+        upper: 57
+      - stanine: 5
+        lower: 58
+        upper: 82
+      - stanine: 6
+        lower: 83
+        upper: 122
+      - stanine: 7
+        lower: 123
+        upper: 161
+      - stanine: 8
+        lower: 162
+        upper: 201
+      - stanine: 9
+        lower: 202
+        upper: null
+      young_women:
+      - stanine: 1
+        lower: 0
+        upper: 31
+      - stanine: 2
+        lower: 32
+        upper: 44
+      - stanine: 3
+        lower: 45
+        upper: 57
+      - stanine: 4
+        lower: 58
+        upper: 70
+      - stanine: 5
+        lower: 71
+        upper: 95
+      - stanine: 6
+        lower: 96
+        upper: 132
+      - stanine: 7
+        lower: 133
+        upper: 169
+      - stanine: 8
+        lower: 170
+        upper: 206
+      - stanine: 9
+        lower: 207
+        upper: null
+    items:
+    - С8
+    - С13
+    - С14
+  - code: FOB_state
+    name: Фобический компонент (СТ-С)
+    weights:
+      С7:
+        0: 0
+        3: 111
+        2: 74
+        1: 37
+      С9:
+        0: 0
+        3: 85
+        2: 56
+        1: 28
+      С12:
+        0: 0
+        3: 87
+        2: 58
+        1: 29
+    norms:
+      kind: stanine
+      adults_and_young_men:
+      - stanine: 1
+        lower: 0
+        upper: 13
+      - stanine: 2
+        lower: 14
+        upper: 19
+      - stanine: 3
+        lower: 20
+        upper: 24
+      - stanine: 4
+        lower: 25
+        upper: 29
+      - stanine: 5
+        lower: 30
+        upper: 54
+      - stanine: 6
+        lower: 55
+        upper: 99
+      - stanine: 7
+        lower: 100
+        upper: 144
+      - stanine: 8
+        lower: 145
+        upper: 188
+      - stanine: 9
+        lower: 189
+        upper: null
+      young_women:
+      - stanine: 1
+        lower: 0
+        upper: 16
+      - stanine: 2
+        lower: 17
+        upper: 23
+      - stanine: 3
+        lower: 24
+        upper: 29
+      - stanine: 4
+        lower: 30
+        upper: 36
+      - stanine: 5
+        lower: 37
+        upper: 61
+      - stanine: 6
+        lower: 62
+        upper: 104
+      - stanine: 7
+        lower: 105
+        upper: 148
+      - stanine: 8
+        lower: 149
+        upper: 191
+      - stanine: 9
+        lower: 192
+        upper: null
+    items:
+    - С7
+    - С9
+    - С12
+  - code: OP_state
+    name: Тревожная оценка перспективы (СТ-С)
+    weights:
+      С3:
+        0: 0
+        3: 110
+        2: 74
+        1: 37
+      С5:
+        0: 0
+        3: 98
+        2: 65
+        1: 32
+      С15:
+        0: 0
+        3: 92
+        2: 61
+        1: 31
+    norms:
+      kind: stanine
+      adults_and_young_men:
+      - stanine: 1
+        lower: 0
+        upper: 44
+      - stanine: 2
+        lower: 45
+        upper: 62
+      - stanine: 3
+        lower: 63
+        upper: 80
+      - stanine: 4
+        lower: 81
+        upper: 97
+      - stanine: 5
+        lower: 98
+        upper: 122
+      - stanine: 6
+        lower: 123
+        upper: 155
+      - stanine: 7
+        lower: 156
+        upper: 187
+      - stanine: 8
+        lower: 188
+        upper: 219
+      - stanine: 9
+        lower: 220
+        upper: null
+      young_women:
+      - stanine: 1
+        lower: 0
+        upper: 53
+      - stanine: 2
+        lower: 54
+        upper: 75
+      - stanine: 3
+        lower: 76
+        upper: 97
+      - stanine: 4
+        lower: 98
+        upper: 118
+      - stanine: 5
+        lower: 119
+        upper: 143
+      - stanine: 6
+        lower: 144
+        upper: 172
+      - stanine: 7
+        lower: 173
+        upper: 200
+      - stanine: 8
+        lower: 201
+        upper: 228
+      - stanine: 9
+        lower: 229
+        upper: null
+    items:
+    - С3
+    - С5
+    - С15
+  - code: SZ_state
+    name: Социальные реакции защиты (СТ-С)
+    weights:
+      С10:
+        0: 0
+        3: 171
+        2: 114
+        1: 57
+      С11:
+        0: 0
+        3: 129
+        2: 86
+        1: 43
+    norms:
+      kind: stanine
+      adults_and_young_men:
+      - stanine: 1
+        lower: 0
+        upper: 50
+      - stanine: 2
+        lower: 51
+        upper: 70
+      - stanine: 3
+        lower: 71
+        upper: 90
+      - stanine: 4
+        lower: 91
+        upper: 110
+      - stanine: 5
+        lower: 111
+        upper: 135
+      - stanine: 6
+        lower: 136
+        upper: 165
+      - stanine: 7
+        lower: 166
+        upper: 195
+      - stanine: 8
+        lower: 196
+        upper: 225
+      - stanine: 9
+        lower: 226
+        upper: null
+      young_women:
+      - stanine: 1
+        lower: 0
+        upper: 60
+      - stanine: 2
+        lower: 61
+        upper: 85
+      - stanine: 3
+        lower: 86
+        upper: 109
+      - stanine: 4
+        lower: 110
+        upper: 134
+      - stanine: 5
+        lower: 135
+        upper: 159
+      - stanine: 6
+        lower: 160
+        upper: 184
+      - stanine: 7
+        lower: 185
+        upper: 210
+      - stanine: 8
+        lower: 211
+        upper: 235
+      - stanine: 9
+        lower: 236
+        upper: null
+    items:
+    - С10
+    - С11
+  bands: []
+notes:
+- 'ИТТ: станайны приведены отдельно для взрослых/юношей и девушек. Порядок коэффициентов вспомогательных шкал (ответы 3, 2,
+  1) в КР явно не пояснён; расчёт предварительный.'

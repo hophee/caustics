@@ -1,0 +1,58 @@
+/* Draft (I2-Draft): box colours per check severity (the board shows the red state only). */
+.k.scr-draft .item.sev-none {
+  border: 1px solid var(--border);
+  padding: 15px 17px;
+}
+.k.scr-draft .item.sev-caution {
+  border-color: #d9a21b;
+}
+.k.scr-draft .item.sev-no_data {
+  border: 2px dashed #a3a7ad;
+}
+.k.scr-draft .inp.dose.sev-contraindicated {
+  border: 1.5px solid #b42024;
+}
+.k.scr-draft .inp.dose.sev-caution {
+  border: 1.5px solid #d9a21b;
+}
+.k.scr-draft .inp.dose.sev-no_data {
+  border: 1.5px dashed #7d828a;
+}
+.k.scr-draft .inp[aria-invalid="true"] {
+  border-color: #b42024;
+}
+.k.scr-draft .item.stopped {
+  background: #f6f5f2;
+}
+.k.scr-draft .struck {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+.k.scr-draft .intake-x {
+  grid-column: span 2;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 8px;
+}
+.k.scr-draft button.add {
+  background: none;
+  font: inherit;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+}
+.k.scr-draft .btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.k.scr-draft .draftbar .linkbtn {
+  font-size: 13px;
+}
+.dlg.scr-prescription-confirm { display: flex; align-items: center; justify-content: center; padding: 20px; }
+.dlg.scr-prescription-confirm .modal { background: var(--paper, #fff); width: min(740px, 100%); max-height: 90vh; overflow: auto; border-radius: 16px; }
+.dlg.scr-prescription-confirm .mh, .dlg.scr-prescription-confirm .mf { padding: 20px; }
+.dlg.scr-prescription-confirm .mf { display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap; }
+.dlg.scr-prescription-confirm .confirmation-body { padding: 0 20px; display: flex; flex-direction: column; gap: 12px; }
+.dlg.scr-prescription-confirm .confirmation-warning { border: 1px solid #b42024; border-radius: 10px; padding: 14px; display: grid; gap: 12px; }
+.dlg.scr-prescription-confirm .just { display: grid; gap: 8px; }
+.dlg.scr-prescription-confirm .err { color: #a4161a; font-size: 13px; }

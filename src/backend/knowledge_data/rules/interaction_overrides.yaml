@@ -1,0 +1,8 @@
+# Clinically reviewed severities for named substance pairs (order-independent).
+# A pair named in a label's 4.5 without an entry here gets `named_interaction_default` (checks.yaml).
+# Open question for the clinical team: review the most frequent named pairs.
+overrides:
+  - substances: ["агомелатин", "флувоксамин"]
+    outcome: contraindicated
+    note: "Флувоксамин — мощный ингибитор CYP1A2; ОХЛП агомелатина: совместное применение противопоказано"
+    reviewed_by: null

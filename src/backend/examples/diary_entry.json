@@ -1,0 +1,19 @@
+{
+  "_comment": "Анна's diary: mood fell from 7 to 3 within three days, she ticked a side effect and wrote free text.",
+  "on_antidepressant": true,
+  "history": [
+    {"day": "2026-10-16", "mood": 7, "anxiety": 4, "energy": 6, "sleep": "normal", "complaints": [], "side_effects": [], "self_harm_thoughts": false, "text": null},
+    {"day": "2026-10-17", "mood": 5, "anxiety": 5, "energy": 5, "sleep": "poor", "complaints": ["sleep"], "side_effects": [], "self_harm_thoughts": false, "text": null}
+  ],
+  "entry": {
+    "day": "2026-10-19",
+    "mood": 3,
+    "anxiety": 7,
+    "energy": 3,
+    "sleep": "poor",
+    "complaints": ["sleep", "fatigue"],
+    "side_effects": ["тошнота"],
+    "self_harm_thoughts": false,
+    "text": "Плохо сплю вторую неделю, по утрам тошнит после таблетки."
+  }
+}

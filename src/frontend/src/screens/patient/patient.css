@@ -1,0 +1,321 @@
+/* Patient screens: what the static boards don't spell out (states, forms, the entries list). */
+
+/* ---- shared controls ---- */
+.p .btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.p .link-btn {
+  align-self: flex-start;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text);
+  text-decoration: underline;
+  font: inherit;
+  cursor: pointer;
+}
+
+.p .link-btn:hover {
+  color: var(--data);
+}
+
+.p button.pill {
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--text);
+}
+
+.p button.pill.on {
+  color: #fff;
+}
+
+.p .more-btn {
+  margin-top: 12px;
+  height: 40px;
+}
+
+.p .fld {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.p .err {
+  font-size: 13px;
+  color: #a4161a;
+}
+
+/* ---- full-screen steps (diary, questionnaire) and the saved screen: no section nav ---- */
+.p.scr-p-flow .bar .mark,
+.p.scr-p-flow .bar .top,
+.p.scr-p-flow>.tabs,
+.p.scr-p-result .bar .top,
+.p.scr-p-result>.tabs {
+  display: none;
+}
+
+.p.scr-p-flow .bar {
+  justify-content: flex-end;
+}
+
+.p.scr-p-flow .flow-close {
+  position: absolute;
+  top: 12px;
+  left: 28px;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+}
+
+@media (max-width: 760px) {
+  .p.scr-p-flow .flow-close {
+    top: 9px;
+    left: 16px;
+  }
+}
+
+.p.scr-p-help .bar .help-link {
+  visibility: hidden;
+}
+
+/* Diary step 1 reuses the «Сегодня» mood faces. */
+.p.scr-p-diary .moods {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.p.scr-p-diary .mood {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  background: var(--ground);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  padding: 14px 0 12px;
+  font: 500 12px/16px "Geologica", sans-serif;
+  color: #3d3b37;
+  cursor: pointer;
+}
+
+.p.scr-p-diary .mood.on {
+  border-color: var(--accent);
+  background: #fff;
+}
+
+.p.scr-p-diary .opts,
+.p.scr-p-diarytext .opts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.p.scr-p-diary .cats {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.p.scr-p-diary .cat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.p.scr-p-diary .chipset .pill {
+  height: auto;
+  min-height: 40px;
+  white-space: normal;
+  text-align: left;
+  line-height: 20px;
+  padding: 8px 16px;
+}
+
+.p.scr-p-diarytext .yn {
+  margin-top: 20px;
+}
+
+/* ---- dose marks (I2-Today uses the P-Meds controls) ---- */
+.p.scr-today .dose-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.p.scr-today .two,
+.p.scr-p-meds .rx .two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.p.scr-today .btn.sel {
+  background: #fff;
+  border: 2px solid var(--accent);
+}
+
+.p.scr-today .reasons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+}
+
+.p.scr-today .marked,
+.p.scr-p-meds .marked {
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.p.scr-p-meds .marked {
+  margin-top: 14px;
+}
+
+/* ---- P-Meds additions ---- */
+.p.scr-p-meds .rx-line {
+  margin-top: 6px;
+}
+
+.p.scr-p-meds .other-drug,
+.p.scr-p-meds .rem-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.p.scr-p-meds .yn {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.p.scr-p-meds select.inp {
+  appearance: auto;
+}
+
+/* ---- diary entries (no board: P-Forms styles) ---- */
+.p.scr-p-entries .due {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.p.scr-p-entries .hist {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.p.scr-p-entries .hr {
+  padding: 14px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.p.scr-p-entries .hr:first-of-type {
+  border-top: none;
+  padding-top: 4px;
+}
+
+.p.scr-p-entries .entry {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.p.scr-p-entries .text {
+  margin: 6px 0 0;
+  font: 16px/24px "Literata", serif;
+  white-space: pre-wrap;
+}
+
+/* ---- P-More additions ---- */
+.p.scr-p-more button.r {
+  width: 100%;
+  background: none;
+  border: none;
+  border-top: 1px solid var(--rule);
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.p.scr-p-more .rows>.r:first-child {
+  border-top: none;
+}
+
+.p.scr-p-question .questionnaire-nav {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 8px;
+}
+.patient-charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; margin: 16px 0; }
+.patient-charts svg { width: 100%; min-height: 110px; }
+.patient-charts .axx { display: flex; justify-content: space-between; font-size: 11px; }
+/* Separate controls from the generated eleven-point scale styles. */
+.p.scr-today .card.mood-checkin {
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  align-self: flex-start;
+}
+.p.scr-today .mood-checkin .moods {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: max-content;
+  max-width: 100%;
+}
+.p.scr-today .mood-checkin .mood { padding-inline: 10px; min-width: 0; }
+.p.scr-p-diary .diary-score-options {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
+.p.scr-p-diary .diary-score-options button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+  min-height: 80px;
+  padding: 12px 6px;
+  box-sizing: border-box;
+  border: 1px solid var(--control);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  font: 500 13px/18px "Geologica", sans-serif;
+  cursor: pointer;
+}
+.p.scr-p-diary .diary-score-options button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+.p.scr-p-diary .diary-score-number { font-size: 20px; line-height: 24px; }
+.p.scr-p-diary .diary-score-options button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.p .sleep-duration { border: 0; padding: 0; margin: 20px 0 0; min-width: 0; }
+.p .sleep-duration legend { padding: 0; margin-bottom: 12px; }
+.p .sleep-duration-fields { display: flex; align-items: flex-end; gap: 12px; }
+.p .sleep-duration-fields label { display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
+.p .sleep-duration-fields .inp { width: 90px; text-align: center; font-size: 24px; font-variant-numeric: tabular-nums; }
+.p .sleep-duration-fields > span { line-height: 48px; font-size: 24px; }
+.p .sleep-duration p { margin: 12px 0 0; }
+.p.scr-today .week .dy i { border-radius: 4px; background: #328268; }
+.p.scr-today .week .dy i.no { background: transparent; border: 1.5px dashed #a3a7ad; }
+.p.scr-today .week .dy i.pending { background: var(--soft); }
+@media (max-width: 560px) {
+  .p.scr-p-diary .diary-score-options { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 380px) {
+  .p.scr-today .card.mood-checkin { padding-inline: 12px; }
+  .p.scr-today .mood-checkin .moods { width: 100%; gap: 6px; }
+  .p.scr-today .mood-checkin .mood { padding-inline: 4px; font-size: 10px; }
+}

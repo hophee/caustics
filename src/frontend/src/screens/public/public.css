@@ -1,0 +1,53 @@
+/* Public pages: states the static boards don't show. The pages carry `.k` for the shared k.css
+   controls; the project page must not inherit the doctor shell's grid. */
+.k.ab {
+  display: block;
+}
+/* The generated s-about.css nests `.ab .in` / `.ab .btn` under `.ab.scr-s-about`, so they never match. */
+.k.ab.scr-s-about > .in {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.k.ab.scr-s-about .btn {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 14px;
+}
+@media (max-width: 640px) {
+  .k.ab.scr-s-about > .in {
+    padding: 0 16px;
+  }
+}
+.k.au .form-err {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #a4161a;
+  font-size: 14px;
+  line-height: 20px;
+}
+.k.au .btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.k.au .linkish {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.k.au .demo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+.k.au .demo .btn {
+  height: 44px;
+  width: 100%;
+}

@@ -1,0 +1,462 @@
+# SCL-90-R — КР F41.1, приложение Г3; также КР F40 (Г2) и F41.0 (Г5). Самоотчёт, последняя неделя.
+# Шкалы — средний балл по пунктам шкалы; индексы GSI, PSI, PDSI. Пороговых значений в КР нет,
+# приведены нормы (Россия: среднее ± ошибка) — в поле norm_ru.
+# Так в КР (все три КР): пункт 56 входит и в SOM, и в DEP (в оригинале DEP — пункт 5).
+code: SCL-90-R
+version: 1
+name: SCL-90-R · опросник выраженности психопатологической симптоматики
+measures: psychopathology_profile
+direction: higher_is_worse
+diagnoses:
+- F40
+- F41.0
+- F41.1
+filled_by: patient
+source: КР F41.1, приложение Г3, стр. PDF 88–94; также КР F40, приложение Г2; КР F41.0, приложение Г5
+answer_sets:
+  distress:
+  - value: 0
+    label: Совсем нет
+  - value: 1
+    label: Немного
+  - value: 2
+    label: Умеренно
+  - value: 3
+    label: Сильно
+  - value: 4
+    label: Очень сильно
+items:
+- id: 1
+  text: Головные боли
+  answers: distress
+- id: 2
+  text: Нервозность или внутренняя дрожь
+  answers: distress
+- id: 3
+  text: Повторяющиеся неотвязные неприятные мысли
+  answers: distress
+- id: 4
+  text: Слабость или головокружение
+  answers: distress
+- id: 5
+  text: Потеря сексуального влечения или удовольствия
+  answers: distress
+- id: 6
+  text: Чувство недовольства другими
+  answers: distress
+- id: 7
+  text: Ощущение, что кто-то другой может управлять Вашими мыслями
+  answers: distress
+- id: 8
+  text: Ощущение, что почти во всех Ваших неприятностях виноваты другие
+  answers: distress
+- id: 9
+  text: Проблемы с памятью
+  answers: distress
+- id: 10
+  text: Ваша небрежность или неряшливость
+  answers: distress
+- id: 11
+  text: Легко возникающая досада или раздражение
+  answers: distress
+- id: 12
+  text: Боли в сердце или грудной клетке
+  answers: distress
+- id: 13
+  text: Чувство страха в открытых местах или на улице
+  answers: distress
+- id: 14
+  text: Упадок сил или заторможенность
+  answers: distress
+- id: 15
+  text: Мысли о том, чтобы покончить с собой
+  answers: distress
+- id: 16
+  text: То, что Вы слышите голоса, которых не слышат другие
+  answers: distress
+- id: 17
+  text: Дрожь
+  answers: distress
+- id: 18
+  text: Чувство, что большинству людей нельзя доверять
+  answers: distress
+- id: 19
+  text: Плохой аппетит
+  answers: distress
+- id: 20
+  text: Слезливость
+  answers: distress
+- id: 21
+  text: Застенчивость или скованность в общении с лицами противоположного пола
+  answers: distress
+- id: 22
+  text: Ощущение, что Вы в западне или пойманы
+  answers: distress
+- id: 23
+  text: Неожиданный или беспричинный страх
+  answers: distress
+- id: 24
+  text: Вспышки гнева, которые Вы не могли сдержать
+  answers: distress
+- id: 25
+  text: Боязнь выйти из дома одному
+  answers: distress
+- id: 26
+  text: Чувство, что Вы сами во многом виноваты
+  answers: distress
+- id: 27
+  text: Боли в пояснице
+  answers: distress
+- id: 28
+  text: Ощущение, что Вам что-то мешает сделать что-либо
+  answers: distress
+- id: 29
+  text: Чувство одиночества
+  answers: distress
+- id: 30
+  text: Подавленное настроение, хандра
+  answers: distress
+- id: 31
+  text: Чрезмерное беспокойство по разным поводам
+  answers: distress
+- id: 32
+  text: Отсутствие интереса к чему-либо
+  answers: distress
+- id: 33
+  text: Чувство страха
+  answers: distress
+- id: 34
+  text: То, что Ваши чувства легко задеть
+  answers: distress
+- id: 35
+  text: Ощущение, что другие проникают в Ваши мысли
+  answers: distress
+- id: 36
+  text: Ощущение, что другие не понимают Вас или не сочувствуют Вам
+  answers: distress
+- id: 37
+  text: Ощущение, что люди недружелюбны или Вы им не нравитесь
+  answers: distress
+- id: 38
+  text: Необходимость делать все очень медленно, чтобы не допустить ошибки
+  answers: distress
+- id: 39
+  text: Сильное или учащенное сердцебиение
+  answers: distress
+- id: 40
+  text: Тошнота или расстройство желудка
+  answers: distress
+- id: 41
+  text: Ощущение, что Вы хуже других
+  answers: distress
+- id: 42
+  text: Боли в мышцах
+  answers: distress
+- id: 43
+  text: Ощущение, что другие наблюдают за Вами или говорят о Вас
+  answers: distress
+- id: 44
+  text: То, что Вам трудно заснуть
+  answers: distress
+- id: 45
+  text: Потребность проверять или перепроверять то, что Вы делаете
+  answers: distress
+- id: 46
+  text: Трудности в принятии решений
+  answers: distress
+- id: 47
+  text: Боязнь езды в автобусах
+  answers: distress
+- id: 48
+  text: Затрудненное дыхание
+  answers: distress
+- id: 49
+  text: Приступы жара или озноба
+  answers: distress
+- id: 50
+  text: Необходимость избегать некоторых мест или действий, так как они Вас пугают
+  answers: distress
+- id: 51
+  text: То, что Вы легко теряете мысль
+  answers: distress
+- id: 52
+  text: Онемение или покалывание в различных частях тела
+  answers: distress
+- id: 53
+  text: Комок в горле
+  answers: distress
+- id: 54
+  text: Ощущение, что будущее безнадежно
+  answers: distress
+- id: 55
+  text: То, что Вам трудно сосредоточиться
+  answers: distress
+- id: 56
+  text: Ощущение слабости в различных частях тела
+  answers: distress
+- id: 57
+  text: Ощущение напряженности или взвинченности
+  answers: distress
+- id: 58
+  text: Тяжесть в конечностях
+  answers: distress
+- id: 59
+  text: Мысли о смерти
+  answers: distress
+- id: 60
+  text: Переедание
+  answers: distress
+- id: 61
+  text: Ощущение неловкости, когда люди наблюдают за Вами
+  answers: distress
+- id: 62
+  text: То, что у Вас в голове чужие мысли
+  answers: distress
+- id: 63
+  text: Импульсы причинять телесные повреждения или вред кому-либо
+  answers: distress
+- id: 64
+  text: Бессонница по утрам
+  answers: distress
+- id: 65
+  text: 'Потребность повторять действия: прикасаться, мыться, пересчитывать'
+  answers: distress
+- id: 66
+  text: Беспокойный и тревожный сон
+  answers: distress
+- id: 67
+  text: Импульсы ломать или крушить что-либо
+  answers: distress
+- id: 68
+  text: Наличие у Вас идей или верований, которые не разделяют другие
+  answers: distress
+- id: 69
+  text: Чрезмерная застенчивость при общении с другими
+  answers: distress
+- id: 70
+  text: Чувство неловкости в людных местах (магазинах, кинотеатрах)
+  answers: distress
+- id: 71
+  text: Чувство, что все, чтобы Вы ни делали, требует больших усилий
+  answers: distress
+- id: 72
+  text: Приступы ужаса или паники
+  answers: distress
+- id: 73
+  text: Чувство неловкости, когда Вы едите или пьете на людях
+  answers: distress
+- id: 74
+  text: То, что Вы часто вступаете в спор
+  answers: distress
+- id: 75
+  text: Нервозность, когда Вы оставались одни
+  answers: distress
+- id: 76
+  text: То, что другие недооценивают Ваши достижения
+  answers: distress
+- id: 77
+  text: Чувство одиночества, даже когда Вы с другими людьми
+  answers: distress
+- id: 78
+  text: Такое сильное беспокойство, что Вы не могли усидеть на месте
+  answers: distress
+- id: 79
+  text: Ощущение собственной никчемности
+  answers: distress
+- id: 80
+  text: Ощущение, что с Вами произойдет что-то плохое
+  answers: distress
+- id: 81
+  text: То, что Вы кричите или швыряетесь вещами
+  answers: distress
+- id: 82
+  text: Боязнь, что Вы упадете в обморок на людях
+  answers: distress
+- id: 83
+  text: Ощущение, что люди злоупотребят Вашим доверием, если Вы им позволите
+  answers: distress
+- id: 84
+  text: Нервировавшие Вас сексуальные мысли
+  answers: distress
+- id: 85
+  text: Мысль о том, что Вы должны быть наказаны за Ваши грехи
+  answers: distress
+- id: 86
+  text: Кошмарные мысли или видения
+  answers: distress
+- id: 87
+  text: Мысли о том, что с Вашим телом что-то не в порядке
+  answers: distress
+- id: 88
+  text: То, что Вы не чувствуете близости ни к кому
+  answers: distress
+- id: 89
+  text: Чувство вины
+  answers: distress
+- id: 90
+  text: Мысли о том, что с Вашим рассудком творится что-то неладное
+  answers: distress
+scoring:
+  method: subscales
+  subscales:
+  - code: SOM
+    name: Соматизация
+    items:
+    - 1
+    - 4
+    - 12
+    - 27
+    - 40
+    - 42
+    - 48
+    - 49
+    - 52
+    - 53
+    - 56
+    - 58
+    aggregate: mean
+    norm_ru: 0.44±0.03
+  - code: O-C
+    name: Обсессивность-компульсивность
+    items:
+    - 3
+    - 9
+    - 10
+    - 28
+    - 38
+    - 45
+    - 46
+    - 51
+    - 55
+    - 65
+    aggregate: mean
+    norm_ru: 0.75±0.04
+  - code: INT
+    name: Межличностная тревожность
+    items:
+    - 6
+    - 21
+    - 34
+    - 36
+    - 37
+    - 41
+    - 61
+    - 69
+    - 73
+    aggregate: mean
+    norm_ru: 0.66±0.03
+  - code: DEP
+    name: Депрессивность
+    items:
+    - 14
+    - 15
+    - 20
+    - 22
+    - 26
+    - 29
+    - 30
+    - 31
+    - 32
+    - 54
+    - 56
+    - 71
+    - 79
+    aggregate: mean
+    norm_ru: 0.62±0.04
+  - code: ANX
+    name: Тревожность
+    items:
+    - 2
+    - 17
+    - 23
+    - 33
+    - 39
+    - 57
+    - 72
+    - 78
+    - 80
+    - 86
+    aggregate: mean
+    norm_ru: 0.47±0.03
+  - code: HOS
+    name: Враждебность
+    items:
+    - 11
+    - 24
+    - 63
+    - 67
+    - 74
+    - 81
+    aggregate: mean
+    norm_ru: 0.60±0.04
+  - code: PHOB
+    name: Фобии
+    items:
+    - 13
+    - 25
+    - 47
+    - 50
+    - 70
+    - 75
+    - 82
+    aggregate: mean
+    norm_ru: 0.18±0.02
+  - code: PAR
+    name: Паранойяльность
+    items:
+    - 8
+    - 18
+    - 43
+    - 68
+    - 76
+    - 83
+    aggregate: mean
+    norm_ru: 0.54±0.04
+  - code: PSY
+    name: Психотизм
+    items:
+    - 7
+    - 16
+    - 35
+    - 62
+    - 77
+    - 84
+    - 85
+    - 87
+    - 88
+    - 90
+    aggregate: mean
+    norm_ru: 0.30±0.03
+  - code: ADD
+    name: Дополнительные пункты
+    items:
+    - 19
+    - 44
+    - 59
+    - 60
+    - 64
+    - 66
+    - 89
+    aggregate: mean
+    norm_ru: 0.49±0.03
+  indices:
+  - code: GSI
+    name: Общий индекс тяжести симптомов
+    norm_ru: 0.51±0.02
+    aggregate: mean_all
+  - code: PSI
+    name: Индекс проявления симптоматики
+    norm_ru: 21.39±2.02
+    aggregate: count_positive
+  - code: PDSI
+    name: Индекс выраженности дистресса
+    norm_ru: 1.17±0.05
+    aggregate: mean_positive
+  bands: []
+critical:
+- item: 15
+  min_value: 1
+  proposal: true
+  note: 'Мысли о том, чтобы покончить с собой: нужна оценка суицидального риска (предложение, в КР не задано)'
+notes:
+- 'SCL-90-R: при отсутствии положительных симптомов индекс дистресса принимается равным 0.'

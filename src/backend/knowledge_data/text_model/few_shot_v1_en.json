@@ -1,0 +1,21 @@
+{
+  "_comment": "English version of fewshot_v1 for the translate-then-classify test. Same rules and same examples (translated by hand). The patient text is machine-translated locally before it is inserted.",
+  "system": "You help a psychiatrist review diary entries of patients treated for depression or an anxiety disorder. For one entry, choose how urgently the doctor needs to read it.\n\nOptions:\nA — Stable: no signs of worsening, danger or new problems.\nB — Needs attention: worse mood, sleep or wellbeing, anxiety, medication side effects, missed doses, new complaints; no threat to life.\nC — Urgent: any thoughts of death or of harming oneself (including indirect and \"passive\" ones), plans or preparation (stockpiling pills, saying goodbye, giving belongings away, farewell letters), self-harm, intent to harm others, hallucinations or delusions.\nD — Unclear: the text does not allow choosing one of the options above with confidence.\n\nRules:\n- If there is any sign of a threat to life, choose C, even if it is expressed indirectly.\n- A negation (\"no thoughts of death\") and a joking exaggeration (\"dying of boredom\") are not signs of a threat.\n- Answer with one letter: A, B, C or D.",
+  "examples": [
+    ["We went to the cinema as a family, it was a nice evening.", "A"],
+    ["I take my pills as prescribed, I sleep better now.", "A"],
+    ["I don't think about death, just a lot of work.", "A"],
+    ["I almost died laughing at a TV series.", "A"],
+    ["Third night in a row I wake up at four and can't fall asleep.", "B"],
+    ["After the new pill I sweat a lot and my hands shake.", "B"],
+    ["Forgot to take my medicine two days in a row, I feel more anxious.", "B"],
+    ["I don't feel like doing anything, even my favourite music doesn't help.", "B"],
+    ["Sometimes I think everyone would be better off without me.", "C"],
+    ["Gave my cat to friends and sorted out my documents, now it's possible.", "C"],
+    ["I'm hiding painkillers in a box under the bed, they'll come in handy.", "C"],
+    ["At night someone whispers from the wall that I am guilty.", "C"],
+    ["I want to hurt myself just to feel something.", "C"],
+    ["Well, nothing much, I guess.", "D"]
+  ],
+  "user_template": "Entry: \"{text}\""
+}

@@ -1,0 +1,26 @@
+/* Additions to board K-Drugs (src/styles/screens/k-drugs.css). */
+.k.scr-k-drugs .list { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.k.scr-k-drugs .dr { grid-template-columns: minmax(0, 1fr) auto; }
+.k.scr-k-drugs .lt { font: 600 20px/26px "Literata", serif; }
+.k.scr-k-drugs .fb { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; min-width: 0; }
+.k.scr-k-drugs .fv { white-space: pre-line; overflow-wrap: anywhere; }
+.k.scr-k-drugs .sec blockquote { overflow-wrap: anywhere; white-space: pre-line; font-size: 14px; line-height: 20px; }
+.k.scr-k-drugs .sec.nd b { color: var(--muted); }
+.k.scr-k-drugs .more { border: none; background: none; padding: 0; color: var(--data); font: inherit; cursor: pointer; }
+.k.scr-k-drugs .src { overflow-wrap: anywhere; text-align: right; }
+.k.scr-k-drugs .btn:disabled { opacity: 0.45; cursor: default; }
+.k.scr-k-drugs .search input::-webkit-search-cancel-button { display: none; }
+@media (min-width: 1101px) {
+  .k.scr-k-drugs .cols > .card { position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow: auto; }
+}
+.k.scr-k-drugs .drug-search-fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.k.scr-k-drugs .drug-search-fields .search { display: block; max-width: none; margin: 6px 0 0; }
+.k.scr-k-drugs .drug-search-fields input { width: 100%; }
+.k.scr-k-drugs .drug-filter { position: relative; }
+.k.scr-k-drugs .drug-forms { position: absolute; z-index: 10; top: 100%; left: 0; width: min(420px, 100%); box-sizing: border-box; margin: 6px 0 0; border: 1px solid var(--rule); border-radius: 8px; padding: 12px; min-width: 0; background: #fff; box-shadow: 0 6px 20px #0002; }
+.k.scr-k-drugs .drug-forms label { display: flex; gap: 8px; align-items: baseline; }
+.k.scr-k-drugs .drug-forms input { flex: none; }
+.k.scr-k-drugs .drug-form-options { display: flex; flex-direction: column; gap: 8px; max-height: 260px; overflow-y: auto; overflow-wrap: anywhere; }
+@media (max-width: 800px) {
+  .k.scr-k-drugs .drug-search-fields { grid-template-columns: minmax(0, 1fr); }
+}

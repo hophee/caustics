@@ -1,0 +1,24 @@
+/* Additions to board I2-Alert (src/styles/screens/alert.css). */
+.dlg.scr-alert .st.off { color: var(--muted); }
+.dlg.scr-alert .st.off i { border-top-color: #e6e4df; }
+.dlg.scr-alert .st.no i { border-top-color: #a4161a; }
+.dlg.scr-alert .entry {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.dlg.scr-alert .entry .eh { display: flex; justify-content: space-between; gap: 12px; }
+.dlg.scr-alert .entry .eh b { font-weight: 500; }
+.dlg.scr-alert .done-note { white-space: pre-line; }
+.dlg.scr-alert .err { color: #a4161a; }
+.dlg.scr-alert .opt:focus-visible,
+.dlg.scr-alert .seg span:focus-visible { outline: 2px solid var(--data); outline-offset: 2px; }
+.dlg.scr-alert .seg span { cursor: pointer; }
+.dlg.scr-alert .btn:disabled { opacity: 0.45; cursor: default; }
+@media (max-width: 760px) {
+  .dlg.scr-alert.scrim { padding: 0; }
+}

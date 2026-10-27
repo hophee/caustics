@@ -1,0 +1,39 @@
+{
+  "_comment": "Fictional patient Анна, 34, F33.2: breastfeeding, takes tramadol (prescribed elsewhere), did not tolerate paroxetine. The doctor adds sertraline and amitriptyline at 300 mg/day (label maximum 150 mg; also contraindicated while breastfeeding).",
+  "today": "2026-10-19",
+  "diagnosis": "F33.2",
+  "patient": {
+    "birth_date": "1992-03-01",
+    "sex": "female",
+    "timezone": "Europe/Moscow",
+    "pregnant": "no",
+    "lactating": "yes",
+    "substance_use": "unknown",
+    "suicide_risk": "low",
+    "diagnoses": ["F33.2"],
+    "allergies": [],
+    "intolerant_excipients": null,
+    "past_intolerance": ["пароксетин"],
+    "past_inefficacy": []
+  },
+  "current_therapy": [
+    {"ref": "rx-tramadol", "substance": "трамадол"}
+  ],
+  "draft": {
+    "new_items": [
+      {
+        "key": "a",
+        "drug": "сертралин",
+        "origin": {"kind": "kr_suggestion", "row_id": "kr-098"},
+        "regimen": {"intakes": [{"at": "08:00", "amount": 50, "unit": "мг"}], "start": "2026-10-20", "duration_days": 28}
+      },
+      {
+        "key": "b",
+        "drug": "амитриптилин",
+        "origin": {"kind": "search"},
+        "regimen": {"intakes": [{"at": "21:00", "amount": 300, "unit": "мг"}], "start": "2026-10-20", "duration_days": 14}
+      }
+    ],
+    "stopped": []
+  }
+}

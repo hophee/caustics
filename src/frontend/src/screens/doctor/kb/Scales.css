@@ -1,0 +1,15 @@
+/* Additions to board K-Scales (src/styles/screens/k-scales.css). */
+.k.scr-k-scales tbody tr { cursor: pointer; }
+.k.scr-k-scales tbody tr:hover td { background: #f6f6f5; }
+.k.scr-k-scales tbody tr.sel:hover td { background: #eef2f8; }
+.k.scr-k-scales .lt { font: 600 20px/26px "Literata", serif; }
+.k.scr-k-scales .items { list-style: none; margin: 0; padding: 0; }
+.k.scr-k-scales .items li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 10px; padding: 11px 16px; border-top: 1px solid var(--rule); }
+.k.scr-k-scales .items li:first-child { border-top: none; }
+.k.scr-k-scales .items .no { color: var(--muted); font-weight: 500; }
+.k.scr-k-scales .opts { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+.k.scr-k-scales .opts .chip { white-space: normal; }
+.k.scr-k-scales .opts b { font-weight: 600; }
+@media (min-width: 1101px) {
+  .k.scr-k-scales .cols > .card + .card { position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow: auto; }
+}

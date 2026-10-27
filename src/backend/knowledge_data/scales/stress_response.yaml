@@ -1,0 +1,66 @@
+# КР F43.1, приложение Г7. Категория 0 (вне классификации): по КР — пациент. 38 пунктов, 1–5.
+# Ключ КР начинается с 40 баллов, минимум суммы — 38: 38–39 отнесены к первой категории (provisional).
+code: Stress-response
+version: 1
+name: "Шкала оценки выраженности психофизиологической реакции на стресс"
+measures: stress_response
+direction: higher_is_worse
+diagnoses: [F43.1]
+filled_by: patient
+source: "КР F43.1, приложение Г7, стр. PDF 180–183"
+
+answer_sets:
+  freq5:
+    - {value: 1, label: "Никогда"}
+    - {value: 2, label: "Редко (чаще, чем один раз в полгода)"}
+    - {value: 3, label: "Иногда (чаще, чем один раз в месяц)"}
+    - {value: 4, label: "Часто (чаще, чем один раз в неделю)"}
+    - {value: 5, label: "Постоянно"}
+
+items:
+  - {id: 1, text: "Затяжные головные боли", answers: freq5}
+  - {id: 2, text: "Мигрени (сосудистые головные боли)", answers: freq5}
+  - {id: 3, text: "Боли в желудке", answers: freq5}
+  - {id: 4, text: "Повышение давления", answers: freq5}
+  - {id: 5, text: "Холодные кисти рук", answers: freq5}
+  - {id: 6, text: "Изжоги", answers: freq5}
+  - {id: 7, text: "Поверхностное, частое дыхание", answers: freq5}
+  - {id: 8, text: "Диарея", answers: freq5}
+  - {id: 9, text: "Сильное сердцебиение", answers: freq5}
+  - {id: 10, text: "Потение рук", answers: freq5}
+  - {id: 11, text: "Тошнота", answers: freq5}
+  - {id: 12, text: "Метеоризм (вздутие живота)", answers: freq5}
+  - {id: 13, text: "Учащенное мочеиспускание", answers: freq5}
+  - {id: 14, text: "Поетние ступней", answers: freq5}
+  - {id: 15, text: "Маслянистая кода", answers: freq5}
+  - {id: 16, text: "Усталость/истощение", answers: freq5}
+  - {id: 17, text: "Энурез (ночное недержание мочи)", answers: freq5}
+  - {id: 18, text: "Сухость во рту", answers: freq5}
+  - {id: 19, text: "Тремор рук", answers: freq5}
+  - {id: 20, text: "Боли в спине", answers: freq5}
+  - {id: 21, text: "Боли в шее", answers: freq5}
+  - {id: 22, text: "Жевательные движения челюстей", answers: freq5}
+  - {id: 23, text: "Скрежетание зубами", answers: freq5}
+  - {id: 24, text: "Запоры", answers: freq5}
+  - {id: 25, text: "Ощущение тяжести в груди или в области сердца", answers: freq5}
+  - {id: 26, text: "Головокружение", answers: freq5}
+  - {id: 27, text: "Рвота", answers: freq5}
+  - {id: 28, text: "Нарушение менструального цикла", answers: freq5}
+  - {id: 29, text: "Пятна на коже", answers: freq5}
+  - {id: 30, text: "Учащенное биение сердца", answers: freq5}
+  - {id: 31, text: "Колики", answers: freq5}
+  - {id: 32, text: "Астма", answers: freq5}
+  - {id: 33, text: "Расстройства пищеварения", answers: freq5}
+  - {id: 34, text: "Пониженное давление", answers: freq5}
+  - {id: 35, text: "Гипервентиляция", answers: freq5}
+  - {id: 36, text: "Боли в суставах", answers: freq5}
+  - {id: 37, text: "Сухость кожного покрова", answers: freq5}
+  - {id: 38, text: "Стоматит/заболевания челюстей", answers: freq5}
+
+scoring:
+  method: sum
+  bands:
+    - {lower: 38,  upper: 75,  code: minimal, level: 0, label: "Вероятность заболеть из-за стресса минимальна", provisional: true}
+    - {lower: 76,  upper: 100, code: low,     level: 1, label: "Небольшая вероятность заболеть из-за стресса"}
+    - {lower: 101, upper: 150, code: high,    level: 2, label: "Высокая вероятность заболевания из-за стресса"}
+    - {lower: 151, upper: 190, code: affected, level: 3, label: "Высока вероятность того, что стресс уже сказался на здоровье"}

@@ -1,0 +1,18 @@
+/* Additions to board I2-Patients (src/styles/screens/patients.css). */
+.k.scr-patients .f { cursor: pointer; font-family: inherit; }
+.k.scr-patients .patients-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; background: #fff; }
+.k.scr-patients .patients-table { width: 100%; min-width: 760px; border-collapse: collapse; text-align: left; }
+.k.scr-patients .patients-table th, .k.scr-patients .patients-table td { padding: 16px 18px; vertical-align: middle; }
+.k.scr-patients .patients-table thead { background: var(--bg, #f6f5f2); font-size: 13px; color: var(--muted); }
+.k.scr-patients .patients-table tbody tr { border-top: 1px solid var(--border); }
+.k.scr-patients .patients-table tbody tr:hover { background: #faf9f7; }
+.k.scr-patients .patients-table tbody tr.urgent { background: #fff7f7; }
+.k.scr-patients .patients-table tbody th { font-weight: 400; }
+.k.scr-patients .patient-name { color: var(--text); font-weight: 600; text-decoration: none; }
+.k.scr-patients .patient-name:hover { text-decoration: underline; }
+.k.scr-patients .patient-alerts { display: flex; align-items: center; gap: 8px; }
+.k.scr-patients .patients-table time { white-space: nowrap; }
+.k.scr-patients .inv { height: 26px; padding: 0 10px; margin-left: 6px; font-size: 12px; }
+.k.scr-patients .pager { display: flex; align-items: center; justify-content: center; gap: 12px; }
+.k.scr-patients .btn:disabled { opacity: 0.45; cursor: default; }
+.k.scr-patients .loc input::-webkit-search-cancel-button { display: none; }

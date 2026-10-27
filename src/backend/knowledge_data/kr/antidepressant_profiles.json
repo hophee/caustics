@@ -1,0 +1,164 @@
+[
+ {
+  "mnn": "пароксетин",
+  "sedation": "-",
+  "sedation_score": "0",
+  "insomnia": "++",
+  "insomnia_score": "2",
+  "profile": "активирующий",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "сертралин",
+  "sedation": "-",
+  "sedation_score": "0",
+  "insomnia": "++",
+  "insomnia_score": "2",
+  "profile": "активирующий",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "флувоксамин",
+  "sedation": "+",
+  "sedation_score": "1",
+  "insomnia": "++",
+  "insomnia_score": "2",
+  "profile": "сбалансированный",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "флуоксетин",
+  "sedation": "-",
+  "sedation_score": "0",
+  "insomnia": "++",
+  "insomnia_score": "2",
+  "profile": "активирующий",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "циталопрам",
+  "sedation": "-",
+  "sedation_score": "0",
+  "insomnia": "++",
+  "insomnia_score": "2",
+  "profile": "активирующий",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "эсциталопрам",
+  "sedation": "-",
+  "sedation_score": "0",
+  "insomnia": "++",
+  "insomnia_score": "2",
+  "profile": "активирующий",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "венлафаксин",
+  "sedation": "-",
+  "sedation_score": "0",
+  "insomnia": "++",
+  "insomnia_score": "2",
+  "profile": "активирующий",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "дулоксетин",
+  "sedation": "-",
+  "sedation_score": "0",
+  "insomnia": "++",
+  "insomnia_score": "2",
+  "profile": "активирующий",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "амитриптилин",
+  "sedation": "+++",
+  "sedation_score": "3",
+  "insomnia": "-",
+  "insomnia_score": "0",
+  "profile": "седативный",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "имипрамин",
+  "sedation": "+",
+  "sedation_score": "1",
+  "insomnia": "++",
+  "insomnia_score": "2",
+  "profile": "сбалансированный",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "кломипрамин",
+  "sedation": "+",
+  "sedation_score": "1",
+  "insomnia": "+",
+  "insomnia_score": "1",
+  "profile": "сбалансированный",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "миансерин",
+  "sedation": "++",
+  "sedation_score": "2",
+  "insomnia": "-",
+  "insomnia_score": "0",
+  "profile": "седативный",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "миртазапин",
+  "sedation": "++",
+  "sedation_score": "2",
+  "insomnia": "-",
+  "insomnia_score": "0",
+  "profile": "седативный",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "тразодон",
+  "sedation": "++",
+  "sedation_score": "2",
+  "insomnia": "-",
+  "insomnia_score": "0",
+  "profile": "седативный",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "агомелатин",
+  "sedation": "-",
+  "sedation_score": "0",
+  "insomnia": "-",
+  "insomnia_score": "0",
+  "profile": "сбалансированный",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "вортиоксетин",
+  "sedation": "-",
+  "sedation_score": "0",
+  "insomnia": "++",
+  "insomnia_score": "2",
+  "profile": "активирующий",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "пипофезин",
+  "sedation": "нет данных",
+  "sedation_score": "",
+  "insomnia": "нет данных",
+  "insomnia_score": "",
+  "profile": "нет данных в КР",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ },
+ {
+  "mnn": "пирлиндол",
+  "sedation": "нет данных",
+  "sedation_score": "",
+  "insomnia": "нет данных",
+  "insomnia_score": "",
+  "profile": "нет данных в КР",
+  "source": "КР 301_3, Прил. А3, табл. 3 (по Bauer et al., 2013)"
+ }
+]

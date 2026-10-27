@@ -1,0 +1,66 @@
+/* Picker dialog: interactive rows and chips are buttons; classes the two boards don't share. */
+.k .dlg.visit-picker .modal { width: min(1400px, 96vw); max-width: none; max-height: 94vh; overflow: auto; }
+.therapy-panes { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px; }
+.therapy-pane { min-width: 0; max-height: 52vh; overflow: auto; border: 1px solid #dce2e9; border-radius: 12px; padding: 16px; }
+.therapy-role { border: 1px solid #dce2e9; border-radius: 10px; padding: 14px; margin: 12px 0; background: #f8fafd; }
+.therapy-role summary { cursor: pointer; padding: 8px 0; }
+.therapy-label { display: flex; flex-wrap: wrap; gap: 8px; width: 100%; text-align: left; padding: 12px; background: white; border: 1px solid #dce2e9; cursor: pointer; }
+.dlg.visit-picker .det { padding: 20px; width: auto; border-top: 1px solid #dce2e9; }
+.dlg.visit-picker .mf { position: sticky; bottom: 0; background: white; z-index: 2; }
+@media (max-width: 850px) { .therapy-panes { grid-template-columns: 1fr; } }
+.dlg button.row,
+.dlg button.chip {
+  font-family: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+.dlg button.row {
+  width: calc(100% + 20px);
+  background: none;
+  border: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+.dlg.scr-pickempty .sub,
+.dlg.scr-picksearch .sub {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--muted);
+}
+.dlg.scr-pickempty .w {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 8px;
+  align-items: baseline;
+  font-size: 13px;
+  line-height: 18px;
+}
+.dlg.scr-pickempty .lv-gry,
+.dlg.scr-picksearch .lv-gry {
+  background: #f4f4f2;
+  color: #4b4f56;
+  border: 1px dashed #a3a7ad;
+  padding: 2px 7px;
+}
+.dlg.scr-picksearch .lv-amb {
+  background: #fff3d6;
+  color: #7a4b00;
+}
+.dlg.scr-picksearch .chk {
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.dlg .btn-p {
+  background: #16161a;
+  color: #fff;
+}
+.dlg .btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.k .dlg .sbar .search {
+  max-width: none;
+  margin: 0;
+  flex: none;
+}

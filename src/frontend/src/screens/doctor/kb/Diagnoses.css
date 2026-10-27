@@ -1,0 +1,15 @@
+/* Board K-Diagnoses: no canvas board of its own; table styles follow K-Scales. */
+.k.scr-k-diagnoses td { vertical-align: top; white-space: normal; }
+.k.scr-k-diagnoses td.code { font-weight: 500; white-space: nowrap; }
+.k.scr-k-diagnoses td.std { white-space: nowrap; }
+.k.scr-k-diagnoses td a { display: block; text-decoration: underline; text-underline-offset: 2px; }
+.k.scr-k-diagnoses td a + a { margin-top: 4px; }
+@media (max-width: 700px) {
+  .k.scr-k-diagnoses thead { display: none; }
+  .k.scr-k-diagnoses tr { display: grid; grid-template-columns: 56px minmax(0, 1fr); column-gap: 8px; padding: 10px 0; border-top: 1px solid var(--rule); }
+  .k.scr-k-diagnoses tbody tr:first-child { border-top: none; }
+  .k.scr-k-diagnoses td { display: block; border: none; padding-top: 2px; padding-bottom: 2px; }
+  .k.scr-k-diagnoses td:nth-child(n + 3) { grid-column: 2; }
+  .k.scr-k-diagnoses td:empty { display: none; }
+  .k.scr-k-diagnoses td.std { white-space: normal; }
+}

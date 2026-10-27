@@ -1,0 +1,100 @@
+/* Patient card additions to the boards (I2-Summary layout and its tabs). */
+/* The I2-Visits board's `.dx` (diagnosis rows) must not restyle the diagnosis line in the profile box. */
+.k.scr-visits .prof .dx {
+  display: block;
+  padding: 0;
+  border-top: none;
+  margin-top: 4px;
+}
+.k .seg button {
+  padding: 7px 12px;
+  font: 13px/16px "Geologica", sans-serif;
+  border: none;
+  border-left: 1px solid var(--control);
+  background: #fff;
+  color: var(--text);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.k .seg button:first-child {
+  border-left: none;
+}
+.k .seg button.on {
+  background: #16161a;
+  color: #fff;
+}
+.k .seg button.nd.on {
+  background: #f4f4f2;
+  color: #16161a;
+  outline: 1px dashed #a3a7ad;
+  outline-offset: -3px;
+}
+.k .linkbtn {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.k .linkbtn.sub {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--muted);
+}
+.k .form-err {
+  color: #a4161a;
+  font-size: 13px;
+  line-height: 18px;
+}
+.k .inline-form {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.k .inline-form .inp {
+  width: auto;
+  flex: 1 1 160px;
+}
+.k .pick {
+  position: relative;
+}
+.k .pick-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  max-height: 264px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid var(--control);
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.08);
+}
+.k .pick-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.k .pick-list li[aria-selected="true"] {
+  background: #f6f5f2;
+}
+.k .pick-list li.muted {
+  cursor: default;
+}
+.k .sq.x {
+  background: #e6e4df;
+}
+.k .empty {
+  padding: 14px 16px;
+  color: var(--muted);
+}

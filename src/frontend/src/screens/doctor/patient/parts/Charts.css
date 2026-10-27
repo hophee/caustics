@@ -1,0 +1,8 @@
+.chart-scroll { overflow-x: auto; }
+.card:has(> .chart-scroll) { min-width: 0; }
+.chart-scroll:focus-visible { outline: 2px solid #1d4f91; outline-offset: -2px; }
+.event-axis { position: relative; height: 20px; font-size: 11px; color: var(--muted, #5f5d58); }
+.event-axis > span { position: absolute; white-space: nowrap; }
+.history-chart { min-width: 0; overflow: clip; }
+.history-chart svg.ln { display: block; width: 100%; height: 100px; min-height: 0; }
+.history-chart svg.sc { display: block; width: 100%; height: auto; }

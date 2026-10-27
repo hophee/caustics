@@ -1,0 +1,65 @@
+# Demo lab values (A13): there is no real lab module. Values are entered by the doctor and are ALWAYS
+# flagged «демо» — they only show how the check logic would use labs. Every threshold below is a TEAM
+# PROPOSAL awaiting clinical review (docs/next/clinical-review.md, section D); change this file, not code.
+
+stale_after_days: 90        # an older value is not used: grey «нет свежих данных» note instead (A12)
+
+tests:                      # min/max = plausible input range (typos are refused), not reference ranges
+  - {code: qtc, label: "QTc", unit: "мс", min: 250, max: 700}
+  - {code: egfr, label: "СКФ (eGFR)", unit: "мл/мин/1,73 м²", min: 1, max: 200}
+  - {code: creatinine, label: "Креатинин", unit: "мкмоль/л", min: 10, max: 2000}
+  - {code: sodium, label: "Натрий", unit: "ммоль/л", min: 100, max: 180}
+  - {code: alt, label: "АЛТ", unit: "Ед/л", min: 0, max: 5000}
+  - {code: ast, label: "АСТ", unit: "Ед/л", min: 0, max: 5000}
+  - {code: lithium, label: "Литий в крови", unit: "ммоль/л", min: 0, max: 5}
+
+# A check fires for a drug in the basket when the patient's latest fresh value crosses the threshold.
+#   drugs.groups: interaction groups (checks.yaml vocabulary); drugs.label_field: renal | hepatic —
+#   the drug's label status for that organ decides (severity via the matrix of checks.yaml, if_yes).
+#   outcome: caution | contraindicated | from_label.
+#   when_missing: none | no_data — what to show for a matching drug when there is no fresh value
+#   (no_data = grey hover only, never a box).
+checks:
+  - code: qtc_prolonged
+    test: qtc
+    above: {male: 450, female: 470}
+    drugs: {groups: ["удлиняющие QT"]}
+    outcome: contraindicated
+    when_missing: no_data
+    message: "Удлинённый интервал QTc при препарате, удлиняющем QT"
+  - code: egfr_low
+    test: egfr
+    below: {any: 30}
+    drugs: {label_field: renal}
+    outcome: from_label
+    when_missing: none
+    message: "Сниженная СКФ"
+  - code: alt_high
+    test: alt
+    above: {any: 120}        # ≈ 3 × upper limit of normal (40 Ед/л)
+    drugs: {label_field: hepatic}
+    outcome: from_label
+    when_missing: none
+    message: "АЛТ выше 3 норм"
+  - code: ast_high
+    test: ast
+    above: {any: 120}
+    drugs: {label_field: hepatic}
+    outcome: from_label
+    when_missing: none
+    message: "АСТ выше 3 норм"
+  - code: sodium_low
+    test: sodium
+    below: {any: 135}
+    min_age: 65              # hyponatraemia on SSRIs/SNRIs in the elderly
+    drugs: {groups: ["серотонинергические"]}
+    outcome: caution
+    when_missing: none
+    message: "Гипонатриемия у пожилого пациента на серотонинергическом препарате"
+  - code: lithium_high
+    test: lithium
+    above: {any: 1.2}
+    drugs: {groups: ["литий"]}
+    outcome: contraindicated
+    when_missing: none
+    message: "Концентрация лития выше терапевтической"

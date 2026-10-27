@@ -1,0 +1,121 @@
+/* Admin «Пользователи»: k.css controls without the doctor shell's grid. */
+.k.adm {
+  display: block;
+  padding: 0 16px 24px;
+}
+.k.adm .adm-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 56px;
+}
+.k.adm .adm-top .mk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.k.adm .adm-top .mk b {
+  font: 600 18px/24px "Literata", serif;
+}
+.k.adm .adm-top .who {
+  margin-left: auto;
+  color: var(--muted);
+}
+.k.adm .sheet {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.k.adm .adm-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.k.adm .adm-filters .inp {
+  max-width: 320px;
+}
+.k.adm .seg button {
+  padding: 7px 12px;
+  font: 13px/16px "Geologica", sans-serif;
+  border: none;
+  border-left: 1px solid var(--control);
+  background: #fff;
+  color: var(--text);
+  cursor: pointer;
+}
+.k.adm .seg button:first-child {
+  border-left: none;
+}
+.k.adm .seg button.on {
+  background: var(--text);
+  color: #fff;
+}
+.k.adm .adm-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.k.adm .adm-table th {
+  text-align: left;
+  font: 500 12px/16px "Geologica", sans-serif;
+  color: var(--muted);
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+}
+.k.adm .adm-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: middle;
+}
+.k.adm .adm-table .mail {
+  word-break: break-all;
+}
+.k.adm .adm-table .act {
+  text-align: right;
+}
+.k.adm .role {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  line-height: 16px;
+  border: 1px solid var(--control);
+}
+.k.adm .role-doctor {
+  background: #e8eef7;
+  border-color: #b9c9e3;
+  color: var(--data);
+}
+.k.adm .role-admin {
+  background: var(--text);
+  border-color: var(--text);
+  color: #fff;
+}
+.k.adm .role-pending {
+  border-style: dashed;
+  color: var(--muted);
+}
+.k.adm .form-err {
+  color: #a4161a;
+}
+.k.adm .btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+@media (max-width: 760px) {
+  .k.adm .adm-table thead {
+    display: none;
+  }
+  .k.adm .adm-table tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .k.adm .adm-table td {
+    padding: 0;
+    border: none;
+  }
+}

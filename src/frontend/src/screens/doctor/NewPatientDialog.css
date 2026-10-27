@@ -1,0 +1,16 @@
+/* Additions to board D-NewPatient (src/styles/screens/newpatient.css): the form state. */
+.dlg.scr-newpatient .form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px 24px 20px;
+  border-top: 1px solid var(--rule);
+}
+.dlg.scr-newpatient .err { color: #a4161a; font-size: 13px; line-height: 18px; }
+.dlg.scr-newpatient .seg span { cursor: pointer; }
+.dlg.scr-newpatient .seg span:focus-visible { outline: 2px solid var(--data); outline-offset: 2px; }
+.dlg.scr-newpatient .btn:disabled { opacity: 0.45; cursor: default; }
+.dlg.scr-newpatient.sc { min-height: 0; }
+@media (max-width: 640px) {
+  .dlg.scr-newpatient .form { padding-left: 16px; padding-right: 16px; }
+}

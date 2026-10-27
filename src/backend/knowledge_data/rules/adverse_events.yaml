@@ -1,0 +1,30 @@
+# Adverse events — НЯ (spec §9 «Нежелательные явления и фармаконадзор»). Team proposals awaiting
+# clinical review (docs/next/clinical-review.md). The symptom list is a starter list of common side
+# effects of antidepressants/anxiolytics until section 4.8 of the labels is extracted.
+
+severities:                       # spec §9 wording, patient-facing
+  - {code: mild, label: "Слегка", alert: null}
+  - {code: moderate, label: "Мешает обычной жизни", alert: planned}
+  - {code: severe, label: "Сильно, не могу терпеть", alert: high}
+
+symptoms:
+  - {code: nausea, label: "Тошнота"}
+  - {code: headache, label: "Головная боль"}
+  - {code: dizziness, label: "Головокружение"}
+  - {code: drowsiness, label: "Сонливость"}
+  - {code: insomnia, label: "Бессонница"}
+  - {code: dry_mouth, label: "Сухость во рту"}
+  - {code: sweating, label: "Повышенная потливость"}
+  - {code: constipation, label: "Запор"}
+  - {code: diarrhea, label: "Диарея"}
+  - {code: sexual, label: "Снижение влечения или сексуальные нарушения"}
+  - {code: tremor, label: "Дрожь (тремор)"}
+  - {code: palpitations, label: "Сердцебиение"}
+  - {code: weight_gain, label: "Прибавка веса"}
+  - {code: agitation, label: "Усиление тревоги или беспокойства"}
+  - {code: irritability, label: "Раздражительность"}
+  - {code: rash, label: "Сыпь, зуд"}
+  - {code: vision, label: "Нарушение зрения"}
+  - {code: other, label: "Другое"}   # free text required
+
+report_portal: "https://roszdravnadzor.gov.ru/services/npr_ais"   # official channel (spec §9)

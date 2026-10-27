@@ -1,0 +1,22 @@
+/* Visit workspace (I2-Visit): blocks the board shows only for step 4. */
+.k.scr-visit .pv {
+  background: #f6f5f2;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+.k.scr-visit .btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.visit-workspace { display: flex; flex-direction: column; gap: 18px; max-width: 1100px; margin: auto; }
+.visit-workspace .fld { margin: 12px 0; }
+.visit-fields { display: grid; grid-template-columns: repeat(auto-fit,minmax(210px,1fr)); gap: 14px; }
+.visit-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.visit-workspace details > summary { cursor: pointer; font-weight: 600; padding: 8px 0; }
+.visit-workspace fieldset { border: 1px solid #dedee4; border-radius: 10px; margin: 14px 0; padding: 16px; }
+.visit-search { position: relative; }
+.visit-options { position: absolute; z-index: 10; top: 100%; left: 0; right: 0; max-height: 280px; overflow: auto; background: white; border: 1px solid #bfc5d0; box-shadow: 0 8px 24px #0002; padding: 0; margin: 0; list-style: none; }
+.visit-options button { width: 100%; text-align: left; background: transparent; padding: 12px; border: 0; cursor: pointer; }
+.visit-options [aria-selected=true], .visit-options button:hover { background: #edf3ff; }
+.k.scr-visit .stp button { background: transparent; border: 0; cursor: pointer; padding: 12px; }
+.k.scr-visit .stp button.on { background: #173e67; color: white; border-radius: 10px; }

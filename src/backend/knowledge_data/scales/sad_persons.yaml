@@ -1,0 +1,79 @@
+# SAD-Persons — КР F20, приложение Г5. Кто заполняет, в КР не указано (категория 1 — врач).
+# В паспорте КР 10 пунктов, в бланке перечислено 9 факторов; ключ КР — до 10 баллов.
+code: SAD-Persons
+version: 1
+name: SAD-Persons · шкала ургентной оценки суицидального риска
+measures: suicide_risk
+direction: higher_is_worse
+diagnoses:
+- F20
+filled_by: clinician
+source: КР F20, приложение Г5, стр. PDF 190–192
+answer_sets:
+  yes_no:
+  - value: 0
+    label: Нет
+  - value: 1
+    label: Да
+items:
+- id: 1
+  text: Мужской пол
+  answers: yes_no
+- id: 2
+  text: Возраст ( 15-24 лет и старше 65 лет)
+  answers: yes_no
+- id: 3
+  text: Депрессия
+  answers: yes_no
+- id: 4
+  text: Психоз
+  answers: yes_no
+- id: 5
+  text: Злоупотребление алкоголем и ПАВ
+  answers: yes_no
+- id: 6
+  text: Суицидальные попытки в прошлом
+  answers: yes_no
+- id: 7
+  text: Наличие суицидального плана
+  answers: yes_no
+- id: 8
+  text: Семейное положение (холост, разведен, вдовец)
+  answers: yes_no
+- id: 9
+  text: Утрата значимых личностных и социальных связей
+  answers: yes_no
+scoring:
+  method: sum
+  bands: []
+critical:
+- kind: total
+  min_value: 5
+  note: Не менее 5 факторов риска в неполном бланке SAD-Persons из КР. Требуется оценка врача; автоматическая категория не
+    определяется.
+notes:
+- В бланке КР перечислено 9 факторов при паспорте и ключе на 10. Показана сумма доступных факторов (0–9); автоматическая категория
+  риска отключена из-за неполноты источника.
+references:
+  source_bands:
+  - lower: 0
+    upper: 2
+    code: low
+    level: 0
+    label: Риск невысок, рекомендовано наблюдение
+  - lower: 3
+    upper: 4
+    code: moderate
+    level: 1
+    label: В госпитализации не нуждается, активное амбулаторное наблюдение в интенсивном режиме
+  - lower: 5
+    upper: 6
+    code: high
+    level: 3
+    label: Решение о госпитализации зависит от кооперации пациента и готовности принять помощь; при необходимости возможна
+      недобровольная госпитализация
+  - lower: 7
+    upper: 10
+    code: extreme
+    level: 4
+    label: Обязательная госпитализация

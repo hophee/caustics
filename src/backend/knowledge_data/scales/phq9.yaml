@@ -1,0 +1,41 @@
+# PHQ-9 — not part of any КР; added by team decision. Key: Kroenke et al., 2001.
+# Item wording here is a shortened demo text; replace with the licensed Russian version (B09).
+code: PHQ-9
+version: 1
+name: "PHQ-9 · опросник здоровья пациента"
+measures: depression
+direction: higher_is_worse
+diagnoses: [F32, F33]
+filled_by: patient
+source: "Вне КР; ключ Kroenke et al., 2001"
+licence_note: "Commonly free to use; confirm the Russian version and terms before production."
+
+answer_sets:
+  freq:
+    - {value: 0, label: "Ни разу"}
+    - {value: 1, label: "Несколько дней"}
+    - {value: 2, label: "Больше половины дней"}
+    - {value: 3, label: "Почти каждый день"}
+
+items:
+  - {id: 1, text: "Мало интереса или удовольствия от занятий", answers: freq}
+  - {id: 2, text: "Подавленность, безнадёжность", answers: freq}
+  - {id: 3, text: "Трудности со сном или слишком долгий сон", answers: freq}
+  - {id: 4, text: "Усталость, мало сил", answers: freq}
+  - {id: 5, text: "Плохой аппетит или переедание", answers: freq}
+  - {id: 6, text: "Плохое мнение о себе, чувство вины", answers: freq}
+  - {id: 7, text: "Трудно сосредоточиться", answers: freq}
+  - {id: 8, text: "Замедленность или, наоборот, беспокойство", answers: freq}
+  - {id: 9, text: "Мысли, что лучше умереть, или о самоповреждении", answers: freq}
+
+scoring:
+  method: sum
+  bands:
+    - {lower: 0,  upper: 4,  code: minimal,    level: 0, label: "Минимальная"}
+    - {lower: 5,  upper: 9,  code: mild,       level: 1, label: "Лёгкая"}
+    - {lower: 10, upper: 14, code: moderate,   level: 2, label: "Умеренная"}
+    - {lower: 15, upper: 19, code: mod_severe, level: 3, label: "Умеренно тяжёлая"}
+    - {lower: 20, upper: 27, code: severe,     level: 4, label: "Тяжёлая"}
+
+critical:
+  - {item: 9, min_value: 1, note: "Мысли о смерти или самоповреждении: нужна оценка суицидального риска"}

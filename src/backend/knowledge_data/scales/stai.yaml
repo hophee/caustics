@@ -1,0 +1,88 @@
+# STAI (Спилбергер–Ханин) — КР F41.1, приложение Г5; также КР F40 (Г4) и F41.0 (Г7).
+# Тексты утверждений — по КР (в прототипе были заглушки). Варианты ответа по КР одинаковы
+# для обеих частей: «Никогда / Почти никогда / Часто / Почти всегда» (1–4); в прототипе для
+# реактивной части были «Нет, это не так … Совершенно верно» — заменено по КР.
+# В КР F41.0 пункты личностной тревожности пронумерованы 1–20, ключ ссылается на 21–40.
+code: STAI
+version: 1
+name: "STAI · шкала тревоги Спилбергера–Ханина"
+measures: anxiety
+direction: higher_is_worse
+diagnoses: [F40, F41.0, F41.1]
+filled_by: patient
+source: "КР F41.1, приложение Г5, стр. PDF 100–103; также КР F40, приложение Г4; КР F41.0, приложение Г7"
+licence_note: "Copyrighted instrument; confirm rights before production use."
+
+answer_sets:
+  freq:
+    - {value: 1, label: "Никогда"}
+    - {value: 2, label: "Почти никогда"}
+    - {value: 3, label: "Часто"}
+    - {value: 4, label: "Почти всегда"}
+
+items:
+  - {id: 1, text: "Я спокоен", answers: freq}
+  - {id: 2, text: "Мне ничто не угрожает", answers: freq}
+  - {id: 3, text: "Я нахожусь в напряжении", answers: freq}
+  - {id: 4, text: "Я внутренне скован", answers: freq}
+  - {id: 5, text: "Я чувствую себя свободно", answers: freq}
+  - {id: 6, text: "Я расстроен", answers: freq}
+  - {id: 7, text: "Меня волнуют возможные неудачи", answers: freq}
+  - {id: 8, text: "Я ощущаю душевный покой", answers: freq}
+  - {id: 9, text: "Я встревожен", answers: freq}
+  - {id: 10, text: "Я испытываю чувство внутреннего удовлетворения", answers: freq}
+  - {id: 11, text: "Я уверен в себе", answers: freq}
+  - {id: 12, text: "Я нервничаю", answers: freq}
+  - {id: 13, text: "Я не нахожу себе места", answers: freq}
+  - {id: 14, text: "Я взвинчен", answers: freq}
+  - {id: 15, text: "Я не чувствую скованности, напряжения", answers: freq}
+  - {id: 16, text: "Я доволен", answers: freq}
+  - {id: 17, text: "Я озабочен", answers: freq}
+  - {id: 18, text: "Я слишком возбужден и мне не по себе", answers: freq}
+  - {id: 19, text: "Мне радостно", answers: freq}
+  - id: 20
+    text: "Мне приятно"
+    hint: "Шкала личной тревожности Инструкция. Прочитайте внимательно каждое из приведенных ниже предложений и зачеркните цифру в соответствующей графе справа в зависимости от того, как Вы себя чувствуете обычно. Над вопросами долго не думайте, поскольку правильных или неправильных ответов нет. Варианты ответа: Никогда (1) · Почти никогда (2) · Часто (3) · Почти всегда (4)"
+    answers: freq
+  - {id: 21, text: "У меня бывает приподнятое настроение", answers: freq}
+  - {id: 22, text: "Я бываю раздражительным", answers: freq}
+  - {id: 23, text: "Я легко расстраиваюсь", answers: freq}
+  - {id: 24, text: "Я хотел бы быть таким же удачливым, как и другие", answers: freq}
+  - {id: 25, text: "Я сильно переживаю неприятности и долго не могу о них забыть", answers: freq}
+  - {id: 26, text: "Я чувствую прилив сил и желание работать", answers: freq}
+  - {id: 27, text: "Я спокоен, хладнокровен и собран", answers: freq}
+  - {id: 28, text: "Меня тревожат возможные трудности", answers: freq}
+  - {id: 29, text: "Я слишком переживаю из-за пустяков", answers: freq}
+  - {id: 30, text: "Я бываю вполне счастлив", answers: freq}
+  - {id: 31, text: "Я все принимаю близко к сердцу", answers: freq}
+  - {id: 32, text: "Мне не хватает уверенности в себе", answers: freq}
+  - {id: 33, text: "Я чувствую себя беззащитным", answers: freq}
+  - {id: 34, text: "Я стараюсь избегать критических ситуаций и трудностей", answers: freq}
+  - {id: 35, text: "У меня бывает хандра", answers: freq}
+  - {id: 36, text: "Я бываю доволен", answers: freq}
+  - {id: 37, text: "Всякие пустяки отвлекают и волнуют меня", answers: freq}
+  - {id: 38, text: "Бывает, что я чувствую себя неудачником", answers: freq}
+  - {id: 39, text: "Я уравновешенный человек", answers: freq}
+  - {id: 40, text: "Меня охватывает беспокойство, когда я думаю о своих делах и заботах", answers: freq}
+
+scoring:
+  method: formula_subscales
+  subscales:
+    - code: reactive
+      name: "Реактивная (ситуативная) тревожность"
+      direct: [3, 4, 6, 7, 9, 12, 14, 15, 17, 18]
+      reverse: [1, 2, 5, 8, 10, 11, 13, 16, 19, 20]
+      constant: 50
+      bands:
+        - {lower: 20, upper: 30, code: low, level: 0, label: "Низкая"}
+        - {lower: 31, upper: 44, code: moderate, level: 2, label: "Умеренная"}
+        - {lower: 45, upper: 80, code: high, level: 3, label: "Высокая"}
+    - code: personal
+      name: "Личностная тревожность"
+      direct: [22, 23, 24, 25, 28, 29, 31, 32, 34, 35, 37, 38, 40]
+      reverse: [21, 26, 27, 30, 33, 36, 39]
+      constant: 35
+      bands:
+        - {lower: 20, upper: 30, code: low, level: 0, label: "Низкая"}
+        - {lower: 31, upper: 44, code: moderate, level: 2, label: "Умеренная"}
+        - {lower: 45, upper: 80, code: high, level: 3, label: "Высокая"}

@@ -1,0 +1,1139 @@
+# FFiCD — КР F60–F61, приложение Г2. Пациент, 121 утверждение, 1–5.
+# Нумерация пунктов восстановлена по ключу КР: в PDF утверждение 40 вписано в пункт 39,
+# пункты 40–72 сдвинуты на один номер, пункт 73 пуст (ключ совпадает по смыслу только со сдвигом).
+# Результат — профиль доменов, субдоменов и нюансов; порогов в КР нет.
+code: FFiCD
+version: 1
+name: FFiCD · пятифакторный личностный опросник для МКБ-11
+measures: personality_traits
+direction: higher_is_worse
+diagnoses:
+- F60
+- F61
+filled_by: patient
+source: КР F60–F61, приложение Г2, стр. PDF 52–58
+answer_sets:
+  agree5:
+  - value: 1
+    label: абсолютно не согласен
+  - value: 2
+    label: не согласен
+  - value: 3
+    label: затрудняюсь ответить (неопределенный ответ)
+  - value: 4
+    label: согласен
+  - value: 5
+    label: абсолютно согласен
+items:
+- id: 1
+  text: Моя тревога часто мешает мне делать то, что я хотел бы.
+  answers: agree5
+- id: 2
+  text: Я считаю себя более замкнутым, чем большинство людей.
+  answers: agree5
+- id: 3
+  text: Другие люди говорили, что я очень внимателен к деталям, может даже чересчур.
+  answers: agree5
+- id: 4
+  text: Иногда я чувствую себя очень ранимым.
+  answers: agree5
+- id: 5
+  text: Меня не слишком заботят потребности других людей.
+  answers: agree5
+- id: 6
+  text: Я попадаю в неприятности, потому что не тщательно все продумываю.
+  answers: agree5
+- id: 7
+  text: Мои эмоции могут выйти из-под контроля.
+  answers: agree5
+- id: 8
+  text: Обычно я ловлю себя на том, что думаю о работе даже в разгар отпуска.
+  answers: agree5
+- id: 9
+  text: Я не огорчаюсь из-за страданий других.
+  answers: agree5
+- id: 10
+  text: Я очень раздражаюсь даже при малейших неудачах.
+  answers: agree5
+- id: 11
+  text: Я склонен отступать, когда задача становится трудной.
+  answers: agree5
+- id: 12
+  text: Я постоянно сравниваю себя с другими и никогда не чувствую себя достаточно хорошо.
+  answers: agree5
+- id: 13
+  text: Мои друзья удивились бы, если бы я когда-нибудь запрыгал от радости.
+  answers: agree5
+- id: 14
+  text: От недели к неделе моя жизнь довольно одинакова, и мне это нравится.
+  answers: agree5
+- id: 15
+  text: Я применял физическую силу в отношении других людей.
+  answers: agree5
+- id: 16
+  text: Из-за страха оказаться в неловком положении мне трудно получать удовольствие от общения с друзьями
+  answers: agree5
+- id: 17
+  text: Я плохо организован.
+  answers: agree5
+- id: 18
+  text: Когда кто-то делает для меня что-то хорошее, я задаюсь вопросом, что ему от меня нужно.
+  answers: agree5
+- id: 19
+  text: Я не очень решителен в общении с другими.
+  answers: agree5
+- id: 20
+  text: Всегда важно следовать правилам, даже если я играю в игру один.
+  answers: agree5
+- id: 21
+  text: Я заслуживаю особого отношения.
+  answers: agree5
+- id: 22
+  text: Я часто боялся потерять кого-то, от кого я зависел.
+  answers: agree5
+- id: 23
+  text: Я попадал в неприятности из-за некоторых своих рискованных решений.
+  answers: agree5
+- id: 24
+  text: Я склонен быть серьезным рядом с людьми.
+  answers: agree5
+- id: 25
+  text: Я рассматриваю все детали вопроса прежде, чем принять решение.
+  answers: agree5
+- id: 26
+  text: Я очень сомневаюсь, что многого достигну в жизни.
+  answers: agree5
+- id: 27
+  text: Я довольно легко бросаю дела.
+  answers: agree5
+- id: 28
+  text: Иногда, чтобы преуспеть в чем-то, необходимо использовать других людей.
+  answers: agree5
+- id: 29
+  text: Я склонен делать поспешные выводы.
+  answers: agree5
+- id: 30
+  text: Я прихожу в ярость, когда люди проявляют ко мне неуважение.
+  answers: agree5
+- id: 31
+  text: Я сильно не привязываюсь к людям, даже к своим друзьям.
+  answers: agree5
+- id: 32
+  text: Я предпочитаю перестраховаться, даже если могу упустить какую-либо возможность.
+  answers: agree5
+- id: 33
+  text: Я буду угрожать людям, чтобы заставить их действовать.
+  answers: agree5
+- id: 34
+  text: Я размышлял о том, как убить себя.
+  answers: agree5
+- id: 35
+  text: Я редко довожу дела до конца без помощи других.
+  answers: agree5
+- id: 36
+  text: Когда я понимаю, что в чем-то потерпел неудачу, то чувствую себя униженным.
+  answers: agree5
+- id: 37
+  text: Я человек, который очень тщательно планирует, возможно, даже слишком.
+  answers: agree5
+- id: 38
+  text: Я стараюсь одеваться так, чтобы люди меня замечали.
+  answers: agree5
+- id: 39
+  text: Я часто нервничаю, когда нахожусь среди незнакомых людей.
+  answers: agree5
+- id: 40
+  text: Мораль означает соблюдение строгого набора правил и принципов.
+  answers: agree5
+- id: 41
+  text: Мне легко манипулировать другими.
+  pdf_number: 40
+  answers: agree5
+- id: 42
+  text: Я плохо справляюсь с делами под давлением.
+  pdf_number: 41
+  answers: agree5
+- id: 43
+  text: Мне трудно делать что-то самостоятельно.
+  pdf_number: 42
+  answers: agree5
+- id: 44
+  text: Вкус еды не доставляет мне особого удовольствия.
+  pdf_number: 43
+  answers: agree5
+- id: 45
+  text: Мои эмоции могут быстро и непредсказуемо меняться.
+  pdf_number: 44
+  answers: agree5
+- id: 46
+  text: Меня считают трудоголиком.
+  pdf_number: 45
+  answers: agree5
+- id: 47
+  text: Я попадал в неприятности из-за прогулов на работе и в школе.
+  pdf_number: 46
+  answers: agree5
+- id: 48
+  text: Я получаю удовольствие от того, что бросаю вызов так называемым авторитетам.
+  pdf_number: 47
+  answers: agree5
+- id: 49
+  text: Я часто теряю терпение, когда имею дело с другими людьми.
+  pdf_number: 48
+  answers: agree5
+- id: 50
+  text: Моя манера речи неорганизованная и плохо продуманная.
+  pdf_number: 49
+  answers: agree5
+- id: 51
+  text: Я часто по-настоящему пессимистично смотрю в будущее.
+  pdf_number: 50
+  answers: agree5
+- id: 52
+  text: Я немного замкнут.
+  pdf_number: 51
+  answers: agree5
+- id: 53
+  text: Мне нравится быть по-настоящему уверенным во всем, прежде чем действовать.
+  pdf_number: 52
+  answers: agree5
+- id: 54
+  text: Некоторые люди говорят, что я слишком дерзок и самоуверен.
+  pdf_number: 53
+  answers: agree5
+- id: 55
+  text: Мне кажется, я не могу в достаточной степени контролировать свои чувства.
+  pdf_number: 54
+  answers: agree5
+- id: 56
+  text: Я совершил много необдуманных поступков в своей жизни.
+  pdf_number: 55
+  answers: agree5
+- id: 57
+  text: Я твердо верю, что следует всегда играть строго по правилам.
+  pdf_number: 56
+  answers: agree5
+- id: 58
+  text: Я не чувствую, что мне есть, что предложить другим людям.
+  pdf_number: 57
+  answers: agree5
+- id: 59
+  text: Я не оказываю большого влияния на окружающих меня людей.
+  pdf_number: 58
+  answers: agree5
+- id: 60
+  text: Большинство людей слишком мягкосердечны.
+  pdf_number: 59
+  answers: agree5
+- id: 61
+  text: Я обычно очень чувствителен к оценкам других людей.
+  pdf_number: 60
+  answers: agree5
+- id: 62
+  text: Я бы хотел, чтобы я мог лучше думать перед тем, как действовать.
+  pdf_number: 61
+  answers: agree5
+- id: 63
+  text: В том, что люди говорят или делают, я часто чувствую скрытые угрозы или пренебрежение.
+  pdf_number: 62
+  answers: agree5
+- id: 64
+  text: Если я начинаю что-то, то работаю, пока не доведу дело до конца.
+  pdf_number: 63
+  answers: agree5
+- id: 65
+  text: Другие люди называли меня расчетливым.
+  pdf_number: 64
+  answers: agree5
+- id: 66
+  text: Я довольно угрюмый человек.
+  pdf_number: 65
+  answers: agree5
+- id: 67
+  text: Мне трудно заставить себя что-либо сделать.
+  pdf_number: 66
+  answers: agree5
+- id: 68
+  text: Сильная радость или воодушевление мне почти незнакомы.
+  pdf_number: 67
+  answers: agree5
+- id: 69
+  text: Мой гнев временами берет надо мной верх.
+  pdf_number: 68
+  answers: agree5
+- id: 70
+  text: Никогда не может быть оправдания отступлению от нравственных норм.
+  pdf_number: 69
+  answers: agree5
+- id: 71
+  text: Если кто-то начинает конфликт, я без проблем его заканчиваю.
+  pdf_number: 70
+  answers: agree5
+- id: 72
+  text: Я ощущаю постоянный груз на своих плечах, когда не оправдываю ожидания других.
+  pdf_number: 71
+  answers: agree5
+- id: 73
+  text: Люди говорят, что я довольно дезорганизован и беспорядочен.
+  pdf_number: 72
+  answers: agree5
+- id: 74
+  text: Я стремлюсь к совершенству даже в том, что другие могли бы назвать незначительными деталями
+  answers: agree5
+- id: 75
+  text: Публично потерпеть неудачу - на самом деле довольно стыдно.
+  answers: agree5
+- id: 76
+  text: Прежде чем соглашусь кому-то помочь, я хочу знать, что получу за это.
+  answers: agree5
+- id: 77
+  text: Я трачу много времени на беспокойство о том, что может случиться.
+  answers: agree5
+- id: 78
+  text: Самостоятельно мне трудно придерживаться поставленной задачи.
+  answers: agree5
+- id: 79
+  text: Мне хотелось бы не так много беспокоиться о том, что обо мне думают другие.
+  answers: agree5
+- id: 80
+  text: Я предпочитаю быть ведомым, а не лидером группы.
+  answers: agree5
+- id: 81
+  text: Я так погружаюсь в свою работу, что упускаю время, отведенное на другие вещи.
+  answers: agree5
+- id: 82
+  text: Для достижения своих собственных целей, я готов использовать других людей.
+  answers: agree5
+- id: 83
+  text: Мне трудно контролировать свое настроение.
+  answers: agree5
+- id: 84
+  text: Как правило я привожу людей в замешательство, когда выражаю свои мысли.
+  answers: agree5
+- id: 85
+  text: Я определенно человек привычки.
+  answers: agree5
+- id: 86
+  text: Я легко раздражаюсь.
+  answers: agree5
+- id: 87
+  text: Мне говорили, что я властный или подлый.
+  answers: agree5
+- id: 88
+  text: После подросткового возраста у меня были мысли о самоубийстве.
+  answers: agree5
+- id: 89
+  text: Мои первоначальные поспешные суждения иногда доставляют мне неприятности.
+  answers: agree5
+- id: 90
+  text: Я почти не выношу, когда люди смеются надо мной.
+  answers: agree5
+- id: 91
+  text: Люди считают меня довольно серьезным и сдержанным человеком.
+  answers: agree5
+- id: 92
+  text: Я могу быть довольно требовательным, когда дело касается долга и чести.
+  answers: agree5
+- id: 93
+  text: Мне не хватает самодисциплины, когда я работаю в одиночестве.
+  answers: agree5
+- id: 94
+  text: Я не думаю, что правила касаются меня в той же степени, в какой они касаются других.
+  answers: agree5
+- id: 95
+  text: Иногда я чувствую, что другие люди имеют что-то против меня
+  answers: agree5
+- id: 96
+  text: У меня были неприятности из-за невыполнения своих обязательств перед другими.
+  answers: agree5
+- id: 97
+  text: Я часто переживал, что кто-то не захочет быть со мной.
+  answers: agree5
+- id: 98
+  text: Я считаю, что безопасное и предсказуемое всегда предпочтительнее захватывающего и опасного
+  answers: agree5
+- id: 99
+  text: Чувствовать жалость к другим - это признак слабости.
+  answers: agree5
+- id: 100
+  text: Я часто чувствую, что жизнь переполняет меня.
+  answers: agree5
+- id: 101
+  text: Когда я сосредотачиваюсь на чем-то, ничто не может помешать мне довести дело до конца.
+  answers: agree5
+- id: 102
+  text: У меня были проблемы с начальством.
+  answers: agree5
+- id: 103
+  text: У меня очень слабая надежда на то, что мои дела улучшатся.
+  answers: agree5
+- id: 104
+  text: Я склонен сразу переходить к делу, не продумывая далеко вперед.
+  answers: agree5
+- id: 105
+  text: Я чувствую себя очень плохо, когда меня унижают в присутствии других.
+  answers: agree5
+- id: 106
+  text: Я эмоционально не близок с большинством людей.
+  answers: agree5
+- id: 107
+  text: Я снова и снова все обдумываю, прежде чем приму решение.
+  answers: agree5
+- id: 108
+  text: Я легко могу вызвать у других сексуальное влечение ко мне.
+  answers: agree5
+- id: 109
+  text: Люди заставляют меня нервничать.
+  answers: agree5
+- id: 110
+  text: Я склонен совершать много ошибок.
+  answers: agree5
+- id: 111
+  text: Я обману человека, если сочту это необходимым.
+  answers: agree5
+- id: 112
+  text: Трудно доверять своим чувствам, потому что они могут легко перемениться.
+  answers: agree5
+- id: 113
+  text: Я выдающийся человек.
+  answers: agree5
+- id: 114
+  text: У меня есть привычка делать выводы до того, как я узнаю все факты.
+  answers: agree5
+- id: 115
+  text: Иногда я чувствую себя никчемным.
+  answers: agree5
+- id: 116
+  text: Я считаю, что есть мало вещей, на которые приятно смотреть.
+  answers: agree5
+- id: 117
+  text: Я фанатично отношусь к тому, чтобы дела были сделаны вовремя.
+  answers: agree5
+- id: 118
+  text: Я не придерживаюсь какой-либо четкой организации или порядка вещей.
+  answers: agree5
+- id: 119
+  text: Критика, которую я получаю, иногда по-настоящему выводит меня из себя.
+  answers: agree5
+- id: 120
+  text: Я попробую почти все, чтобы получить “острые ощущения”.
+  answers: agree5
+- id: 121
+  text: Меня беспокоит, что общество теряет свой сильный нравственный стержень.
+  answers: agree5
+scoring:
+  method: subscales
+  bands: []
+  subscales:
+  - name: Ананкастность
+    items:
+    - 3
+    - 8
+    - 14
+    - 20
+    - 25
+    - 32
+    - 37
+    - 40
+    - 46
+    - 53
+    - 57
+    - 64
+    - 70
+    - 74
+    - 81
+    - 85
+    - 92
+    - 98
+    - 101
+    - 107
+    - 117
+    - 121
+    aggregate: sum
+    code: domains_1
+  - name: Диссоциальность
+    items:
+    - 5
+    - 9
+    - 15
+    - 21
+    - 28
+    - 33
+    - 38
+    - 41
+    - 48
+    - 54
+    - 60
+    - 65
+    - 71
+    - 76
+    - 82
+    - 87
+    - 94
+    - 99
+    - 102
+    - 108
+    - 111
+    - 113
+    aggregate: sum
+    code: domains_2
+  - name: Расторможенность
+    items:
+    - 6
+    - 11
+    - 17
+    - 23
+    - 27
+    - 29
+    - 35
+    - 43
+    - 47
+    - 50
+    - 56
+    - 62
+    - 67
+    - 73
+    - 78
+    - 84
+    - 89
+    - 93
+    - 96
+    - 104
+    - 110
+    - 114
+    - 118
+    - 120
+    aggregate: sum
+    code: domains_3
+  - name: Отстраненность
+    items:
+    - 2
+    - 13
+    - 19
+    - 24
+    - 31
+    - 44
+    - 52
+    - 59
+    - 68
+    - 80
+    - 91
+    - 106
+    - 116
+    aggregate: sum
+    code: domains_4
+  - name: Негативная аффективность
+    items:
+    - 1
+    - 4
+    - 7
+    - 10
+    - 12
+    - 16
+    - 18
+    - 22
+    - 26
+    - 30
+    - 34
+    - 36
+    - 39
+    - 42
+    - 45
+    - 49
+    - 51
+    - 55
+    - 58
+    - 61
+    - 63
+    - 66
+    - 69
+    - 72
+    - 75
+    - 77
+    - 79
+    - 83
+    - 86
+    - 88
+    - 90
+    - 95
+    - 97
+    - 100
+    - 103
+    - 105
+    - 109
+    - 112
+    - 115
+    - 119
+    aggregate: sum
+    code: domains_5
+  - name: Агрессия
+    domain: Диссоциальность
+    items:
+    - 15
+    - 33
+    - 48
+    - 71
+    - 87
+    - 102
+    aggregate: sum
+    code: subdomains_1
+  - name: Недостаток эмпатии
+    domain: Диссоциальность
+    items:
+    - 9
+    - 28
+    - 41
+    - 60
+    - 65
+    - 82
+    - 99
+    - 111
+    aggregate: sum
+    code: subdomains_2
+  - name: Эгоцентризм
+    domain: Диссоциальность
+    items:
+    - 5
+    - 21
+    - 38
+    - 54
+    - 76
+    - 94
+    - 108
+    - 113
+    aggregate: sum
+    code: subdomains_3
+  - name: Гневливость
+    domain: Негативная аффективность
+    items:
+    - 10
+    - 30
+    - 49
+    - 69
+    - 86
+    - 119
+    aggregate: sum
+    code: subdomains_4
+  - name: Тревожность
+    domain: Негативная аффективность
+    items:
+    - 1
+    - 22
+    - 39
+    - 77
+    - 97
+    - 109
+    aggregate: sum
+    code: subdomains_5
+  - name: Депрессивность
+    domain: Негативная аффективность
+    items:
+    - 12
+    - 34
+    - 51
+    - 58
+    - 72
+    - 88
+    - 103
+    - 115
+    aggregate: sum
+    code: subdomains_6
+  - name: Эмоциональная лабильность
+    domain: Негативная аффективность
+    items:
+    - 7
+    - 45
+    - 55
+    - 66
+    - 83
+    - 112
+    aggregate: sum
+    code: subdomains_7
+  - name: Недоверчивость
+    domain: Негативная аффективность
+    items:
+    - 18
+    - 63
+    - 95
+    aggregate: sum
+    code: subdomains_8
+  - name: Чувство стыда
+    domain: Негативная аффективность
+    items:
+    - 16
+    - 36
+    - 61
+    - 75
+    - 90
+    - 105
+    aggregate: sum
+    code: subdomains_9
+  - name: Ранимость
+    domain: Негативная аффективность
+    items:
+    - 4
+    - 26
+    - 42
+    - 79
+    - 100
+    aggregate: sum
+    code: subdomains_10
+  - name: Неорганизованность
+    domain: Расторможенность
+    items:
+    - 17
+    - 50
+    - 73
+    - 84
+    - 118
+    aggregate: sum
+    code: subdomains_11
+  - name: Безответственность
+    domain: Расторможенность
+    items:
+    - 11
+    - 27
+    - 35
+    - 43
+    - 47
+    - 67
+    - 78
+    - 93
+    - 96
+    - 110
+    aggregate: sum
+    code: subdomains_12
+  - name: Опрометчивость
+    domain: Расторможенность
+    items:
+    - 6
+    - 29
+    - 62
+    - 89
+    - 104
+    - 114
+    aggregate: sum
+    code: subdomains_13
+  - name: Поиск острых ощущений
+    domain: Расторможенность
+    items:
+    - 23
+    - 56
+    - 120
+    aggregate: sum
+    code: subdomains_14
+  - name: Эмоциональная отстраненность
+    domain: Отстраненность
+    items:
+    - 13
+    - 31
+    - 44
+    - 68
+    - 106
+    - 116
+    aggregate: sum
+    code: subdomains_15
+  - name: Социальная отстраненность
+    domain: Отстраненность
+    items:
+    - 2
+    - 24
+    - 52
+    - 91
+    aggregate: sum
+    code: subdomains_16
+  - name: Неуверенность
+    domain: Отстраненность
+    items:
+    - 19
+    - 59
+    - 80
+    aggregate: sum
+    code: subdomains_17
+  - name: Негибкость
+    domain: Ананкастность
+    items:
+    - 14
+    - 25
+    - 32
+    - 40
+    - 53
+    - 70
+    - 85
+    - 98
+    - 107
+    - 121
+    aggregate: sum
+    code: subdomains_18
+  - name: Перфекционизм
+    domain: Ананкастность
+    items:
+    - 3
+    - 20
+    - 37
+    - 57
+    - 74
+    - 92
+    aggregate: sum
+    code: subdomains_19
+  - name: Трудоголизм
+    domain: Ананкастность
+    items:
+    - 8
+    - 46
+    - 64
+    - 81
+    - 101
+    - 117
+    aggregate: sum
+    code: subdomains_20
+  - name: Пассивная агрессия
+    domain: Диссоциальность
+    items:
+    - 48
+    - 102
+    aggregate: sum
+    code: nuances_1
+  - name: Физическая агрессия
+    domain: Диссоциальность
+    items:
+    - 15
+    - 71
+    aggregate: sum
+    code: nuances_2
+  - name: Вербальная агрессия
+    domain: Диссоциальность
+    items:
+    - 33
+    - 87
+    aggregate: sum
+    code: nuances_3
+  - name: Бессердечность
+    domain: Диссоциальность
+    items:
+    - 9
+    - 60
+    - 99
+    aggregate: sum
+    code: nuances_4
+  - name: Корыстность
+    domain: Диссоциальность
+    items:
+    - 28
+    - 82
+    aggregate: sum
+    code: nuances_5
+  - name: Расчетливость
+    domain: Диссоциальность
+    items:
+    - 41
+    - 65
+    - 111
+    aggregate: sum
+    code: nuances_6
+  - name: Высокомерие
+    domain: Диссоциальность
+    items:
+    - 54
+    - 113
+    aggregate: sum
+    code: nuances_7
+  - name: Вседозволенность
+    domain: Диссоциальность
+    items:
+    - 21
+    - 94
+    aggregate: sum
+    code: nuances_8
+  - name: Эгоизм
+    domain: Диссоциальность
+    items:
+    - 5
+    - 76
+    aggregate: sum
+    code: nuances_9
+  - name: Тщеславие
+    domain: Диссоциальность
+    items:
+    - 38
+    - 108
+    aggregate: sum
+    code: nuances_10
+  - name: Раздражительность
+    domain: Негативная аффективность
+    items:
+    - 49
+    - 86
+    aggregate: sum
+    code: nuances_11
+  - name: Нерегулируемый гнев
+    domain: Негативная аффективность
+    items:
+    - 10
+    - 69
+    aggregate: sum
+    code: nuances_12
+  - name: Реактивный гнев
+    domain: Негативная аффективность
+    items:
+    - 30
+    - 119
+    aggregate: sum
+    code: nuances_13
+  - name: Значимость внешней оценки
+    domain: Негативная аффективность
+    items:
+    - 1
+    - 77
+    aggregate: sum
+    code: nuances_14
+  - name: Ненадежная привязанность
+    domain: Негативная аффективность
+    items:
+    - 22
+    - 97
+    aggregate: sum
+    code: nuances_15
+  - name: Социальная тревожность
+    domain: Негативная аффективность
+    items:
+    - 39
+    - 109
+    aggregate: sum
+    code: nuances_16
+  - name: Чувство собственной неадекватности в межличностных отношениях
+    domain: Негативная аффективность
+    items:
+    - 12
+    - 72
+    aggregate: sum
+    code: nuances_17
+  - name: Пессимизм
+    domain: Негативная аффективность
+    items:
+    - 51
+    - 103
+    aggregate: sum
+    code: nuances_18
+  - name: Суицидальность
+    domain: Негативная аффективность
+    items:
+    - 34
+    - 88
+    aggregate: sum
+    code: nuances_19
+  - name: Чувство бесполезности
+    domain: Негативная аффективность
+    items:
+    - 58
+    - 115
+    aggregate: sum
+    code: nuances_20
+  - name: Нарушение эмоциональной регуляции
+    domain: Негативная аффективность
+    items:
+    - 7
+    - 55
+    - 83
+    aggregate: sum
+    code: nuances_21
+  - name: Быстрая смена эмоций
+    domain: Негативная аффективность
+    items:
+    - 45
+    - 66
+    - 112
+    aggregate: sum
+    code: nuances_22
+  - name: Уничижение
+    domain: Негативная аффективность
+    items:
+    - 36
+    - 75
+    - 105
+    aggregate: sum
+    code: nuances_23
+  - name: Застенчивость
+    domain: Негативная аффективность
+    items:
+    - 16
+    - 61
+    - 90
+    aggregate: sum
+    code: nuances_24
+  - name: Хрупкость
+    domain: Негативная аффективность
+    items:
+    - 4
+    - 42
+    - 100
+    aggregate: sum
+    code: nuances_25
+  - name: Потребность в восхищении
+    domain: Негативная аффективность
+    items:
+    - 26
+    - 79
+    aggregate: sum
+    code: nuances_26
+  - name: Дезорганизация
+    domain: Расторможенность
+    items:
+    - 17
+    - 73
+    - 118
+    aggregate: sum
+    code: nuances_27
+  - name: Неорганизованная речь
+    domain: Расторможенность
+    items:
+    - 50
+    - 84
+    aggregate: sum
+    code: nuances_28
+  - name: Необязательность
+    domain: Расторможенность
+    items:
+    - 47
+    - 96
+    aggregate: sum
+    code: nuances_29
+  - name: Отвлекаемость
+    domain: Расторможенность
+    items:
+    - 35
+    - 78
+    - 93
+    aggregate: sum
+    code: nuances_30
+  - name: Невыносливость
+    domain: Расторможенность
+    items:
+    - 11
+    - 27
+    - 67
+    aggregate: sum
+    code: nuances_31
+  - name: Некомпетентность
+    domain: Расторможенность
+    items:
+    - 43
+    - 110
+    aggregate: sum
+    code: nuances_32
+  - name: Опрометчивое поведение
+    domain: Расторможенность
+    items:
+    - 6
+    - 62
+    - 104
+    aggregate: sum
+    code: nuances_33
+  - name: Опрометчивое мышление
+    domain: Расторможенность
+    items:
+    - 29
+    - 89
+    - 114
+    aggregate: sum
+    code: nuances_34
+  - name: Безрадостность
+    domain: Отстраненность
+    items:
+    - 13
+    - 68
+    aggregate: sum
+    code: nuances_35
+  - name: Физическая ангедония
+    domain: Отстраненность
+    items:
+    - 44
+    - 116
+    aggregate: sum
+    code: nuances_36
+  - name: Социальная ангедония
+    domain: Отстраненность
+    items:
+    - 31
+    - 106
+    aggregate: sum
+    code: nuances_37
+  - name: Равнодушие
+    domain: Отстраненность
+    items:
+    - 24
+    - 91
+    aggregate: sum
+    code: nuances_38
+  - name: Социальная изоляция
+    domain: Отстраненность
+    items:
+    - 2
+    - 52
+    aggregate: sum
+    code: nuances_39
+  - name: Догматизм
+    domain: Ананкастность
+    items:
+    - 40
+    - 70
+    - 121
+    aggregate: sum
+    code: nuances_40
+  - name: Ригидность
+    domain: Ананкастность
+    items:
+    - 14
+    - 85
+    aggregate: sum
+    code: nuances_41
+  - name: Неприятие риска
+    domain: Ананкастность
+    items:
+    - 32
+    - 98
+    aggregate: sum
+    code: nuances_42
+  - name: Руминативное размышление
+    domain: Ананкастность
+    items:
+    - 25
+    - 53
+    - 107
+    aggregate: sum
+    code: nuances_43
+  - name: Привередливость
+    domain: Ананкастность
+    items:
+    - 3
+    - 37
+    - 74
+    aggregate: sum
+    code: nuances_44
+  - name: Педантичность
+    domain: Ананкастность
+    items:
+    - 20
+    - 57
+    - 92
+    aggregate: sum
+    code: nuances_45
+  - name: Упрямство
+    domain: Ананкастность
+    items:
+    - 64
+    - 101
+    - 117
+    aggregate: sum
+    code: nuances_46
+  - name: Усердие в работе
+    domain: Ананкастность
+    items:
+    - 8
+    - 46
+    - 81
+    aggregate: sum
+    code: nuances_47
+notes:
+- 'Нумерация FFiCD восстановлена по ключу: в PDF пункт 40 включён в 39, номера 40–72 сдвинуты, 73 пуст. Пороговые категории
+  в источнике не заданы.'

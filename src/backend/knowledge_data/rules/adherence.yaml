@@ -1,0 +1,29 @@
+# Dose marks, adherence and reminders (spec §9). Values are draft/team proposals:
+# the adherence formula and bands are open question A07/C08; reminder defaults follow A15.
+
+late_after_minutes: 120        # taken more than 2 h after the scheduled time = «с опозданием»
+mark_before_minutes: 120       # «Принял» can be pressed up to 2 h before the scheduled time
+backfill_hours: 48             # a forgotten mark can still be entered for 48 h
+unmarked_counts_as_missed: true   # A07/C08: past doses without a mark lower the percentage
+green_from: 80                 # ≥ 80 % green (draft: «зелёный ≥80%»)
+yellow_from: 60                # 60–80 % yellow, below 60 % red
+summary_days: 7                # default period of the doctor's summary
+skip_streak_days: 3            # days in a row with a skipped/unmarked dose → signal to the doctor
+
+skip_reasons:                  # spec §9, the reason is required for «Пропустил»
+  - {code: forgot, label: "Забыл"}
+  - {code: intolerance, label: "Плохо переношу"}
+  - {code: ran_out, label: "Закончилось"}
+  - {code: not_needed, label: "Не считаю нужным"}
+  - {code: other, label: "Другое"}
+
+reminders:                     # the default rule each patient starts with (A15: one rule per dose)
+  enabled: true
+  first_offset_minutes: 0      # first reminder at the scheduled time
+  repeat_every_minutes: 30
+  max_repeats: 2               # at most 2 more reminders, cancelled by a mark
+
+reminder_limits:               # what a patient may set (frequency limit)
+  max_repeats: 5
+  min_repeat_every_minutes: 10
+  send_grace_minutes: 30

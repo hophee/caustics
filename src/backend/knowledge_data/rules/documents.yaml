@@ -1,0 +1,16 @@
+# Patient documents (spec §11 «Документы пациента»). Certificates (справки) are out of scope (D-111).
+# Automatic extraction of diagnoses/drugs/allergies from uploads is NOT built (jury criterion T2 stays
+# uncovered): an upload is «не подтверждено» until the doctor has looked at it.
+
+max_upload_mb: 10
+content_types: [application/pdf, image/jpeg, image/png]   # checked by file signature, not by name
+
+patient_kinds:                    # what the patient can upload
+  - {code: outside_record, label: "Документ из другой клиники"}
+  - {code: lab_report, label: "Результаты анализов"}
+  - {code: other, label: "Другое"}
+
+doctor_kinds:                     # what the doctor issues to the patient
+  - {code: visit_summary, label: "Итоги приёма"}
+  - {code: discharge_summary, label: "Выписка"}
+  - {code: prescription, label: "Назначение"}   # built from a confirmed prescription version

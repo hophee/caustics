@@ -1,0 +1,26 @@
+/* «Сводка»: three «now» cells (the appointment cell is hidden until appointments exist, D-113). */
+@media (min-width: 1101px) {
+  .k.scr-summary .now {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+}
+.k.scr-summary .course .g {
+  gap: 2px;
+}
+.k.scr-summary .course .sq {
+  min-width: 0;
+}
+.k.scr-summary .course-scroll { overflow-x: auto; }
+.k.scr-summary .course-scroll:focus-visible { outline: 2px solid #1d4f91; outline-offset: -2px; }
+.k.scr-summary .course .sq.n { border: 1px dotted #a3a7ad; box-sizing: border-box; }
+.k.scr-summary .course .obs { height: 2px; border: 0; background: repeating-linear-gradient(to right, #b3b0a8 0 5px, transparent 5px 10px); }
+.k.scr-summary .course .leg { gap: 8px 18px; align-items: center; }
+.k.scr-summary .course .leg > strong { flex-basis: 84px; font-weight: 500; }
+
+.k.scr-summary .scale-labels {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}

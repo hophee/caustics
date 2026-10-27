@@ -1,0 +1,16 @@
+# Psychiatrist referral recommendations «обязательно / желательно» (spec §10, F8).
+# The rules are open question B02, so the list ships EMPTY: the doctor can still recommend and issue
+# referrals by hand. The system only ever creates a *recommendation*; the doctor decides.
+#
+# Rule kinds:
+#   scale_level      — result of `scale` with band level ≥ `min_level` (0–4)
+#   critical_answer  — any critical answer on `scale`
+#   diary_urgent     — a diary entry triaged «Срочно»
+#
+# Example (not active):
+#   - {code: phq9_severe, category: obligatory, kind: scale_level, scale: PHQ-9, min_level: 4,
+#      reason: "PHQ-9: тяжёлая депрессия"}
+#   - {code: gad7_high, category: desirable, kind: scale_level, scale: GAD-7, min_level: 3,
+#      reason: "GAD-7: высокий уровень тревожности"}
+
+rules: []

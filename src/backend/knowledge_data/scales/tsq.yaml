@@ -1,0 +1,35 @@
+# TSQ (Trauma Screening Questionnaire) — КР F43.1, приложение Г1.
+# «Да» — если симптом был по крайней мере дважды на прошлой неделе.
+# Скрининг: для диагноза нужна клиническая оценка.
+code: TSQ
+version: 1
+name: "TSQ · опросник на скрининг ПТСР"
+measures: ptsd_screening
+direction: higher_is_worse
+diagnoses: [F43.1]
+filled_by: patient_clinician
+source: "КР F43.1, приложение Г1, стр. PDF 138–139"
+
+answer_sets:
+  yes_no:
+    - {value: 0, label: "НЕТ"}
+    - {value: 1, label: "ДА"}
+
+items:
+  - {id: 1, text: "Тяжелые мысли или воспоминания о событии приходили мне в голову против моей воли", answers: yes_no}
+  - {id: 2, text: "Мне снились тяжелые сны о том, что со мной случилось", answers: yes_no}
+  - {id: 3, text: "Я вдруг замечал(а), что действую и чувствую себя так, как будто бы ситуация повторяется снова", answers: yes_no}
+  - {id: 4, text: "Когда что-то напоминает мне об этом событии, я чувствую себя подавленным", answers: yes_no}
+  - {id: 5, text: "Когда что-то напоминало мне о случившемся, я испытывал(а) неприятные физические ощущения (потливость, сбой дыхания, тошноту, учащение пульса и др.)", answers: yes_no}
+  - {id: 6, text: "У меня нарушен сон (трудности засыпания или частые пробуждения)", answers: yes_no}
+  - {id: 7, text: "Я чувствовал(а) постоянное раздражение и гнев", answers: yes_no}
+  - {id: 8, text: "Мне было сложно сосредоточится", answers: yes_no}
+  - {id: 9, text: "Я стал более осведомлён о потенциальных опасностях для себя и других", answers: yes_no}
+  - {id: 10, text: "Я все время был(а) напряжен(а) и вздрагивал(а), если что-то внезапно пугало меня", answers: yes_no}
+
+scoring:
+  method: count_matching
+  value: 1
+  threshold: 6
+  positive: {lower: 6, upper: 10, code: positive, level: 2, label: "Группа риска по ПТСР"}
+  negative: {lower: 0, upper: 5, code: negative, level: 0, label: "Ниже порога (6 ответов «да»)"}

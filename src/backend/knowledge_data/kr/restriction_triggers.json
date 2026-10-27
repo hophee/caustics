@@ -1,0 +1,12 @@
+{
+  "_comment": "When each КР restriction applies (keyed by its 'condition' text). Keys: always, mixed_features, suicide_risk ('high'), pregnant, stage_contains. Mixed features and the stage are not asked (D-122): a restriction depending on them, or without a trigger, is shown as «уточнить». Proposal for clinical review.",
+  "Смешанные черты": {"mixed_features": true},
+  "Смешанные черты, на монотерапии АД усиливаются гипоманиакальные симптомы": {"mixed_features": true},
+  "Резистентность, комбинации": {"always": true},
+  "Высокий суицидальный риск": {"suicide_risk": "high"},
+  "Профилактика": {"stage_contains": "Профилактическ"},
+  "Любой этап": {"always": true},
+  "Бензодиазепины": {"always": true},
+  "ТЦА": {"always": true},
+  "Беременность": {"pregnant": true}
+}
